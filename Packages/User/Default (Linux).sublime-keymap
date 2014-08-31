@@ -1,0 +1,9 @@
+[
+  { "keys": ["ctrl+f1"], "command": "show_panel", "args": {"panel": "console", "toggle": true} },
+  { "keys": ["ctrl+shift+e"], "command": "split_selection_into_lines" },
+  { "keys": ["ctrl+super+v"], "command": "paste_from_history" },
+  {
+    "command": "navigate_to_definition",
+    "keys": ["super+period"]
+  }
+]

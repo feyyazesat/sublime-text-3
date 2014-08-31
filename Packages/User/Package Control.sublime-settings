@@ -1,0 +1,36 @@
+{
+	"installed_packages":
+	[
+		"Alignment",
+		"BracketHighlighter",
+		"CTags",
+		"Emmet",
+		"FileDiffs",
+		"Git",
+		"Git Config",
+		"JSLint",
+		"Phpcs",
+		"Pretty JSON",
+		"Pretty YAML",
+		"SFTP",
+		"SideBarEnhancements",
+		"soda-theme",
+		"SublimeLinter",
+		"SublimeLinter-jshint",
+		"SublimeLinter-php",
+		"SublimeLinter-phpcs",
+		"SublimeOpenFromPath",
+		"Theme - Soda",
+		"TrailingSpaces",
+		"WordHighlight"
+	],
+	"repositories":
+	[
+		"https://github.com/facelessuser/BracketHighlighter/tree/ST3",
+		"https://github.com/SublimeCodeIntel/SublimeCodeIntel",
+		"https://github.com/buymeasoda/soda-theme/",
+		"https://github.com/titoBouzout/SideBarEnhancements",
+		"https://github.com/SublimeText/WordHighlight",
+		"https://github.com/astronaughts/SublimeOpenFromPath"
+	]
+}

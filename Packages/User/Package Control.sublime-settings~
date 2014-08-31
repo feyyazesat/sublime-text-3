@@ -1,0 +1,20 @@
+{
+	"installed_packages":
+	[
+		"BracketHighlighter",
+		"Emmet",
+		"Git",
+		"Git Config",
+		"JSLint",
+		"Phpcs",
+		"SideBarEnhancements",
+		"SublimeCodeIntel",
+		"SublimeLinter",
+		"SublimeLinter-php"
+	],
+	"repositories":
+	[
+		"https://github.com/facelessuser/BracketHighlighter/tree/ST3",
+		"https://github.com/SublimeCodeIntel/SublimeCodeIntel"
+	]
+}

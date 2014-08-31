@@ -1,0 +1,36 @@
+{
+	"auto_find_in_selection": true,
+	"color_scheme": "Packages/User/Monokai (SL).tmTheme",
+	"font_size": 9,
+	"ignored_packages":
+	[
+		"Lisp",
+		"Vintage",
+		"Matlab",
+		"TCL",
+		"AppleScript",
+		"SublimeCodeIntel",
+		"C#",
+		"Lua",
+		"Erlang",
+		"Pascal",
+		"LaTeX",
+		"Go",
+		"ActionScript",
+		"Pretty YAML",
+		"D",
+		"SublimePrettyJson",
+		"Graphviz",
+		"Phpcs",
+		"Haskell",
+		"Scala",
+		"C++",
+		"ASP",
+		"Groovy",
+		"JSLint",
+		"Objective-C"
+	],
+	"tab_size": 2,
+	"theme": "Soda Dark.sublime-theme",
+	"translate_tabs_to_spaces": true
+}
