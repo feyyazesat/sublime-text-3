@@ -3,6 +3,7 @@
 	[
 		"Alignment",
 		"BracketHighlighter",
+		"Compass",
 		"CTags",
 		"Emmet",
 		"FileDiffs",
@@ -20,6 +21,7 @@
 		"SublimeLinter-php",
 		"SublimeLinter-phpcs",
 		"SublimeOpenFromPath",
+		"Syntax Highlighting for Sass",
 		"Theme - Soda",
 		"TrailingSpaces",
 		"WordHighlight"
