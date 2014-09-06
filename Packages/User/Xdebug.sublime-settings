@@ -9,13 +9,24 @@
     // Example:
     // "/absolute/path/to/file/on/server" : "/path/to/file/on/computer",
     // "/var/www/htdocs/example/" : "C:/git/websites/example/"
+    //php.ini xdebug settings
+    //zend_extension = /usr/lib/php5/20121212/xdebug.so
+
+    //xdebug.remote_enable=1
+    //xdebug.remote_host=localhost
+    //xdebug.remote_port=15000
+    //xdebug.remote_handler="dbgp"
+    //xdebug.remote_mode=req
+    //xdebug.profiler_enable = 1
+    //xdebug.profiler_enable_trigger = 1
+    //xdebug.profiler_output_dir = /home/web/data/xdebug
+    //xdebug.profiler_output_name = cachegrind.out.%t.%s
+    //xdebug.max_nesting_level=250
+
     "path_mapping": {
 
     },
 
-    // Determine which URL to launch in the default web browser
-    // when starting/stopping a session.
-    "url": "",
     // Always close debug windows and restore layout on session stop.
     "close_on_stop": true,
     // Show in output parsed response instead of raw XML.
@@ -23,4 +34,10 @@
     // Always launch browser on session start/stop.
     // Note: This will only work if you have the 'url' setting configured.
     "launch_browser": true,
+    // Which port number Sublime Text should listen
+    // to connect with debugger engine.
+    "port": 15000,
+    // Maximum amount of nested levels to retrieve
+    // of array elements and object properties.
+    "max_depth": 5,
 }
