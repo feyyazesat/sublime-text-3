@@ -1,7 +1,7 @@
 {
 	"user":
 	{
-		"debug": true,
+		"debug": false,
 		"delay": 0.25,
 		"error_color": "D02000",
 		"gutter_theme": "Packages/SublimeLinter/gutter-themes/Default/Default.gutter-theme",
@@ -11,6 +11,16 @@
 		"lint_mode": "save only",
 		"linters":
 		{
+			"jshint":
+			{
+				"@disable": true,
+				"args":
+				[
+				],
+				"excludes":
+				[
+				]
+			},
 			"php":
 			{
 				"@disable": false,
@@ -20,6 +30,17 @@
 				"excludes":
 				[
 				]
+			},
+			"phpcs":
+			{
+				"@disable": true,
+				"args":
+				[
+				],
+				"excludes":
+				[
+				],
+				"standard": "PSR2"
 			}
 		},
 		"mark_style": "fill",
