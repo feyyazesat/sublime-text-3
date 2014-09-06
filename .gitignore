@@ -1,5 +1,7 @@
-*
-!Installed \Packages
-!Packages
-!README.md
-!.gitignore
+Packages/User/Xdebug.log
+Backup/
+Index/
+Cache/
+Local/
+Projects/
+File\ Backups
