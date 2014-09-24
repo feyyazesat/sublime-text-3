@@ -1,0 +1,7 @@
+{
+	"indent_with_space": false,
+	"php_bin": "/usr/bin/php",
+	"psr1": false,
+	"psr2": true,
+    "format_on_save": false
+}

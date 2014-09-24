@@ -1,6 +1,9 @@
 {
 	"auto_find_in_selection": true,
 	"color_scheme": "Packages/User/Monokai (SL).tmTheme",
+	"detect_indentation": true,
+	"draw_white_space": "selection",
+	"ensure_newline_at_eof_on_save": true,
 	"file_exclude_patterns":
 	[
 		".tags",
@@ -11,32 +14,32 @@
 	"font_size": 8,
 	"ignored_packages":
 	[
-		"Matlab",
+		"soda-theme",
+		"Go",
+		"Erlang",
+		"Groovy",
+		"AppleScript",
+		"C++",
 		"LaTeX",
 		"Haskell",
-		"C++",
 		"D",
-		"Graphviz",
-		"Lisp",
-		"C#",
-		"Phpcs",
-		"Pascal",
-		"Gist",
-		"Objective-C",
-		"AppleScript",
-		"JSLint",
-		"Vintage",
-		"ASP",
-		"TCL",
-		"SublimeCodeIntel",
-		"Groovy",
-		"soda-theme",
-		"Erlang",
-		"Lua",
 		"ActionScript",
-		"Go",
+		"Matlab",
+		"C#",
+		"ASP",
+		"Graphviz",
+		"Gist",
+		"Lua",
+		"JSLint",
+		"Objective-C",
+		"Phpcs",
+		"Pretty YAML",
+		"SublimeCodeIntel",
+		"TCL",
 		"Scala",
-		"Pretty YAML"
+		"Lisp",
+		"Vintage",
+		"Pascal"
 	],
 	"rulers":
 	[
@@ -45,16 +48,6 @@
 	"tab_size": 4,
 	"theme": "Soda Dark.sublime-theme",
 	"translate_tabs_to_spaces": true,
-
-  // Set to true to removing trailing white space on save
-  "trim_trailing_white_space_on_save": false,
-
-  // Set to true to ensure the last line of the file ends in a newline
-  // character when saving
-  "ensure_newline_at_eof_on_save": true,
-  // Set to "none" to turn off drawing white space, "selection" to draw only the
-  // white space within the selection, and "all" to draw all white space
-  "draw_white_space": "selection",
-	"detect_indentation": true,
+	"trim_trailing_white_space_on_save": false,
 	"use_tab_stops": true
 }

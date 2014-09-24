@@ -12,6 +12,7 @@
 		"Gutter Color",
 		"JSLint",
 		"Phpcs",
+		"phpfmt",
 		"Pretty JSON",
 		"SFTP",
 		"SideBarEnhancements",
