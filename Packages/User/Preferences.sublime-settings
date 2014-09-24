@@ -8,40 +8,53 @@
 		".gemtags",
 		"*.php~"
 	],
-	"font_size": 9,
+	"font_size": 8,
 	"ignored_packages":
 	[
+		"Matlab",
+		"LaTeX",
+		"Haskell",
+		"C++",
+		"D",
+		"Graphviz",
+		"Lisp",
+		"C#",
+		"Phpcs",
 		"Pascal",
 		"Gist",
-		"JSLint",
-		"C#",
-		"Scala",
-		"D",
-		"TCL",
-		"Phpcs",
-		"Pretty YAML",
-		"Lua",
-		"AppleScript",
-		"Vintage",
 		"Objective-C",
-		"ActionScript",
-		"Matlab",
-		"Go",
-		"LaTeX",
-		"SublimeCodeIntel",
-		"C++",
-		"Graphviz",
-		"Haskell",
-		"Groovy",
+		"AppleScript",
+		"JSLint",
+		"Vintage",
 		"ASP",
+		"TCL",
+		"SublimeCodeIntel",
+		"Groovy",
+		"soda-theme",
 		"Erlang",
-		"Lisp"
+		"Lua",
+		"ActionScript",
+		"Go",
+		"Scala",
+		"Pretty YAML"
 	],
 	"rulers":
 	[
 		120
 	],
-	"tab_size": 2,
+	"tab_size": 4,
 	"theme": "Soda Dark.sublime-theme",
-	"translate_tabs_to_spaces": true
+	"translate_tabs_to_spaces": true,
+
+  // Set to true to removing trailing white space on save
+  "trim_trailing_white_space_on_save": false,
+
+  // Set to true to ensure the last line of the file ends in a newline
+  // character when saving
+  "ensure_newline_at_eof_on_save": true,
+  // Set to "none" to turn off drawing white space, "selection" to draw only the
+  // white space within the selection, and "all" to draw all white space
+  "draw_white_space": "selection",
+	"detect_indentation": true,
+	"use_tab_stops": true
 }
