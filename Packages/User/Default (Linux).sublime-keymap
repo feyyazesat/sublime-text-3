@@ -71,10 +71,11 @@
 
   { "keys": ["super+period"], "command" : "navigate_to_definition" },                                //period is mouse_click_1 overriden
 
-  { "keys": [ "ctrl+alt+m" ], "command": "un_pretty_json" }                                          //overridex
+  { "keys": [ "ctrl+alt+m" ], "command": "un_pretty_json" },                                         //overriden
 
   //{ "keys": ["ctrl+l"], "command": "expand_selection", "args": {"to": "line"} },
   //{ "keys": ["ctrl+d"], "command": "find_under_expand" },
+  { "keys": ["ctrl+alt+d"], "command": "find_under_expand_skip" }                                    //overriden
   //{ "keys": ["ctrl+k", "ctrl+d"], "command": "find_under_expand_skip" },
   //{ "keys": ["ctrl+shift+space"], "command": "expand_selection", "args": {"to": "scope"} },
   //{ "keys": ["ctrl+shift+m"], "command": "expand_selection", "args": {"to": "brackets"} },
