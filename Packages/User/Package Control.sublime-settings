@@ -1,6 +1,7 @@
 {
 	"installed_packages":
 	[
+		"AutoBackups",
 		"BracketHighlighter",
 		"Compass",
 		"CTags",
@@ -13,9 +14,11 @@
 		"Phpcs",
 		"phpfmt",
 		"Pretty JSON",
+		"SfCommand",
 		"SFTP",
 		"SideBarEnhancements",
 		"soda-theme",
+		"sublime-github",
 		"SublimeLinter",
 		"SublimeLinter-jshint",
 		"SublimeLinter-php",
@@ -25,7 +28,8 @@
 		"Syntax Highlighting for Sass",
 		"Theme - Soda",
 		"TrailingSpaces",
-		"WordHighlight"
+		"WordHighlight",
+		"Xdebug Client"
 	],
 	"repositories":
 	[
