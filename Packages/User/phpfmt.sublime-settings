@@ -1,7 +1,8 @@
 {
-	"indent_with_space": false,
+	"disable_auto_align": true,
+	"format_on_save": false,
+	"indent_with_space": true,
 	"php_bin": "/usr/bin/php",
 	"psr1": false,
-	"psr2": true,
-    "format_on_save": false
+	"psr2": true
 }
