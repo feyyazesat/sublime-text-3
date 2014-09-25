@@ -11,7 +11,6 @@ XUbuntu 14.04 LTS with Xface
 
   Beautifiers
 
-    Alignment                     http://wbond.net/sublime_packages/alignment
     BracketHighlighter            https://github.com/facelessuser/BracketHighlighter/tree/ST3
     Pretty JSON                   https://github.com/dzhibas/SublimePrettyJson
     Trailing Spaces               https://github.com/SublimeText/TrailingSpaces
@@ -32,11 +31,11 @@ XUbuntu 14.04 LTS with Xface
     Git                           https://github.com/kemayo/sublime-text-git
     Git Config                    https://github.com/robballou/gitconfig-sublimetext
     Github                        https://github.com/bgreenlee/sublime-github
-
+    BetterCompletion              https://sublime.wbond.net/packages/Better%20Completion
   PHP Specific
 
     Phpcs
-    SublimeLinter-php             https://github.com/SublimeLinter/SublimeLinter-php
+    SublimeLinter-php             (https://github.com/SublimeLinter/SublimeLinter-php)
     SublimeLinter-phpcs           http://benmatselby.github.io/sublime-phpcs
     Symfony2 Snippets             https://github.com/raulfraile/sublime-symfony2
     SfCommand                     https://github.com/jtwebb/sfcommand
@@ -52,7 +51,7 @@ XUbuntu 14.04 LTS with Xface
     Emmet                         https://github.com/sergeche/emmet-sublime
     Compass                       https://github.com/WhatWeDo/Sublime-Text-2-Compass-Build-System
     Syntax Highlighting for Sass  https://github.com/P233/Syntax-highlighting-for-Sass
-
+    HTML-CSS-JS Prettify          https://github.com/victorporof/Sublime-HTMLPrettify
 
 
 
