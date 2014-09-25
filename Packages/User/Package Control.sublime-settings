@@ -1,7 +1,6 @@
 {
 	"installed_packages":
 	[
-		"Alignment",
 		"BracketHighlighter",
 		"Compass",
 		"CTags",
