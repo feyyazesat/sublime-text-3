@@ -35,7 +35,7 @@ XUbuntu 14.04 LTS with Xface
   PHP Specific
 
     Phpcs
-    SublimeLinter-php             (https://github.com/SublimeLinter/SublimeLinter-php)
+    SublimeLinter-php(https://github.com/SublimeLinter/SublimeLinter-php)
     SublimeLinter-phpcs           http://benmatselby.github.io/sublime-phpcs
     Symfony2 Snippets             https://github.com/raulfraile/sublime-symfony2
     SfCommand                     https://github.com/jtwebb/sfcommand
