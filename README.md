@@ -5,8 +5,11 @@ My configuration files to make ST3 PHP(Symfony 2), JS, CSS(SASS, Compass) IDE wi
 #### Workstation
 
 I tested this confs on following Linux Distros, please let me know any issues on any other distros or unix like distros and help me to improve documentation for other distros and Unix like distros. 
+
 Ubuntu 12.04 LTS with MATE/Gnome 2
+
 XUbuntu 14.04 LTS with Xface
+
 #### Packages
 
   Beautifiers
@@ -87,9 +90,28 @@ XUbuntu 14.04 LTS with Xface
 #### Capabilities
 
 #### Requirements
-
+jq(http://stedolan.github.io/) installation
 #### Installation
-
+1. Install Sublime Text 3
+2. get sublime configs from this repo.
+cd  ~/.config/sublime-text-3/;
+rm -r Packages;
+rm -r "Installed Packages";
+git clone https://github.com/feyyazesat/sublime-text-3.git configs;
+mv configs/* configs/.git configs/.gitignore ../;
+3. Install exuberant-ctags
+sudo apt-get install exuberant-ctags
+4. Install node.js http://nodejs.org/
+5. Install PHP_CodeSniffer
+6. Install jshint
+npm install jshint -g
+7. Install jq
+download jq from http://stedolan.github.io/
+chmod a+x ~/Downloads/jq
+sudo mv ~/Downloads/jq /usr/local/bin/
+8. Install Compass http://compass-style.org/install/
+9. Install php5-xdebug
+10. 
 #### Shortcuts
 
 #### Shortcuts
