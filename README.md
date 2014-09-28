@@ -57,6 +57,7 @@ XUbuntu 14.04 LTS with Xface
   PHP Specific
   
   Phpcs
+  Phpfmt (https://github.com/dericofilho/php.fmt)
 
   SublimeLinter-php(https://github.com/SublimeLinter/SublimeLinter-php)
 
