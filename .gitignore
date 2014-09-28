@@ -6,7 +6,6 @@ Index/
 Cache/
 Local/
 Projects/
-File\ Backups
 #There is my api token etc. just edit your Default/Github.sublime-settings or copy as this file and edit your token
 Packages/User/GitHub.sublime-settings
 Packages/User/Package Control.cache/*
