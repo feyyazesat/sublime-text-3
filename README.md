@@ -88,6 +88,36 @@ XUbuntu 14.04 LTS with Xface
 
 
 #### Capabilities
+Creates file backups on every save, categorized date/time
+PHP, HTML, Javascript, Symfony2 autocompletes
+PHP xdebug debugging
+git, github, gists operations
+prettify json, unprettify json
+Bracket, quotes matching and shows on gutter area
+ctrl+shift+o open from path
+ctrl+shift mouse 1 click  goto definition.CTAGS
+Syfmony2 snippets
+Symfony2 operations e.g.assetic:dump
+Twig syntax coloring
+Twig snippets
+Twig Linting
+HTML formatting/indentation
+Emmet
+Gutter color
+PHP formatting/indentation PSR1 or PSR2
+PHP linting
+JS linting
+PHP syntax errors
+JS syntax errors
+SASS syntax coloring
+FTP, SFTP operations
+JSON To XML
+Sidebar Enhancments
+File Diffs
+Trailing spaces, newlines on save
+
+Many extra functionality.
+And still lightweight!   Happy Lightweight Editor!
 
 #### Requirements
 jq(http://stedolan.github.io/) installation
@@ -99,19 +129,18 @@ rm -r Packages;
 rm -r "Installed Packages";
 git clone https://github.com/feyyazesat/sublime-text-3.git configs;
 mv configs/* configs/.git configs/.gitignore ../;
-3. Install exuberant-ctags
-sudo apt-get install exuberant-ctags
-4. Install node.js http://nodejs.org/
-5. Install PHP_CodeSniffer
-6. Install jshint
-npm install jshint -g
+3. sudo apt-get install exuberant-ctags
+5. pecl install PHP_CodeSniffer
+4. sudo apt-get install nodejs
+6. npm install jshint -g
+
 7. Install jq
 download jq from http://stedolan.github.io/
 chmod a+x ~/Downloads/jq
 sudo mv ~/Downloads/jq /usr/local/bin/
-8. Install Compass http://compass-style.org/install/
-9. Install php5-xdebug
+8. Install Compass http://compass-style.org/install/ https://rubygems.org/pages/download
+9. sudo apt-get install php5-xdebug
 10. 
 #### Shortcuts
-
-#### Shortcuts
+You can see all shortcuts which I'm using and which ovverriden 
+~/.config/sublime-text-3/Packages/User/Default (Linux).sublime-keymap
