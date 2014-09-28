@@ -167,7 +167,9 @@ chmod a+x ~/Downloads/jq
 sudo mv ~/Downloads/jq /usr/local/bin/
 8. Install Compass http://compass-style.org/install/ https://rubygems.org/pages/download
 9. sudo apt-get install php5-xdebug
-10. 
+
 #### Shortcuts
-You can see all shortcuts which I'm using and which ovverriden 
+
+You can see all shortcuts which I'm using and which ovverriden
+
 ~/.config/sublime-text-3/Packages/User/Default (Linux).sublime-keymap
