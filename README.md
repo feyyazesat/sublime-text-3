@@ -90,31 +90,57 @@ XUbuntu 14.04 LTS with Xface
 #### Capabilities
 
 1.Creates file backups on every save, categorized date/time
+
 2.PHP, HTML, Javascript, Symfony2 autocompletes
+
 3.PHP xdebug debugging
+
 4.PHP formatting/indentation PSR1 or PSR2
+
 5.PHP linting
+
 6.git, github, gists operations
+
 7.prettify json, unprettify json
+
 8.Bracket, quotes matching and shows on gutter area
+
 9.ctrl+shift+o open from path
+
 10.ctrl+shift mouse 1 click  goto definition.CTAGS
+
 11.Syfmony2 snippets
+
 12.Symfony2 operations e.g.assetic:dump
+
 13.Twig syntax coloring
+
 14.Twig snippets
+
 15.Twig Linting
+
 16.HTML formatting/indentation
+
 17.Emmet
+
 18.Gutter color
+
 19.JS linting
+
 20.PHP syntax errors
+
 21.JS syntax errors
+
 22.SASS syntax coloring
+
 23.FTP, SFTP operations
+
 24.JSON To XML
+
 25.Sidebar Enhancments
+
 26.File Diffs
+
 27.Trailing spaces, newlines on save
 
 Many extra functionality.
