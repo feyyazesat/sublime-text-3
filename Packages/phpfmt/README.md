@@ -1,7 +1,39 @@
 # [php.fmt](https://github.com/dericofilho/php.tools) support for Sublime Text 2/3
 
 
-php.fmt and php.tools aim to help PHP development. One of the features, code formatting, now is embeded too in ST3. For now it formats automatically when you save the PHP file.
+php.fmt, php.tools and php.oracle aim to help PHP development. The following features are available through command palette (`ctrl+shift+P` or `cmd+shift+P`) :
+
+ *  phpfmt: toggle format on save - handy if the code is small and you don't want to worry about formatting.
+ *  phpfmt: format now - if format on save is disabled, you can manually format the code.
+ *  phpfmt: format selection - formats only the selected code
+ *  phpfmt: toggle auto align - it aligns vertically equals and fat arrow symbols
+ *  phpfmt: toggle indent with space - for those who don't *like* indentation with tabs.
+ *  phpfmt: toggle visibility order - ensure PSR2 §4.2. `[final|static] [private|protected|public] [$variable|function]...`
+ *  phpfmt: getter and setter (snake_case) - analyses the classes in the file and add setters/getters - set_variable()/get_variable()
+ *  phpfmt: getter and setter (camelCase) - analyses the classes in the file and add setters/getters - setVariable()/getVariable()
+ *  phpfmt: getter and setter (Go) - analyses the classes in the file and add setters/getters - SetVariable()/Variable()
+ *  phpfmt: toggle merge else+if into elseif - convert `...} else if (...` into `...} elseif( ...`
+ *  phpfmt: toggle convert long array into short array - convert array(...) into [...] automatically
+ *  phpfmt: toggle yoda mode - change automatically condition evaluations from `$a == CONST` to `CONST == $a`
+ *  phpfmt: toggle automatic preincrement/predecrement - convert from `$a++` to `++$a`
+ *  phpfmt: toggle smart linebreak after open curly - when adding missing curly blocks in codes, it adds an extra line break after first added curly token. Thus:
+ <pre>
+ if ($a) $b;
+ </pre>
+ to
+ <pre>
+ if ($a) {
+     $b;
+ }
+ </pre>
+
+
+Options which applies code analysis to work:
+
+ *  phpfmt: build autocomplete database - analyse the code and generates a database used for autocomplete and automatic insertion of dependencies
+ *  phpfmt: toggle autocomplete - GoSublime autocomplete style
+ *  phpfmt: toggle dependency autoimport
+ *  phpfmt: analyse this - analyse the current word, and seek for information such: class hierarchical data, implemented interfaces and methods.
 
 
 ### What does it do?
@@ -44,7 +76,7 @@ $a        = 10;
 $otherVar = 20;
 $third    = 30;
 </code></pre>
-<i>This can be disabled with the option "disable_auto_align"</i>
+<i>This can be enabled with the option "enable_auto_align"</i>
 </td>
 </tr>
 <tr>
@@ -184,14 +216,10 @@ Plugin runs better with PHP 5.5 or newer installed in the machine running the pl
   Example: `"php_bin":"c:/PHP/php.exe"`
 
 ### Settings
+Prefer using the toggle options at command palette. However you might find yourself in need to setup where PHP is running, use this option below for the configuration file.
 ```
-"psr1":false,
-"psr2":false,
 "php_bin":"/usr/local/bin/php",
-"indent_with_space":false,
-// This allows you to invoke the formatter when you feel like it
-"format_on_save":true
 ```
 
 ### Troubleshooting
-- If php errors display make sure you can run PHP from the command line
+- If php errors appears make sure you can run PHP from the command line
