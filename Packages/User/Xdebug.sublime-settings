@@ -40,7 +40,7 @@
     "port": 15000,
     // Maximum amount of nested levels to retrieve
     // of array elements and object properties.
-    "max_depth": 3,
+    "max_depth": 4,
     // Do not use the debugging window layout.
     "disable_layout": true,
 
