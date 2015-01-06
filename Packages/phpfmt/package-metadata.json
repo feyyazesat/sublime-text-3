@@ -1,1 +1,1 @@
-{"url": "https://github.com/dericofilho/sublime-phpfmt", "dependencies": [], "version": "1.41.0", "platforms": ["*"], "description": "Plugin to format PHP code - supports also PSR1/2", "sublime_text": "*"}
+{"version": "1.42.1", "dependencies": [], "platforms": ["*"], "description": "Plugin to format PHP code - supports also PSR1/2", "sublime_text": "*", "url": "https://github.com/dericofilho/sublime-phpfmt"}
