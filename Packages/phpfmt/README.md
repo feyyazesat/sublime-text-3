@@ -1,42 +1,137 @@
-# [php.fmt](https://github.com/dericofilho/php.tools) support for Sublime Text 2/3
+# [php.fmt](https://github.com/phpfmt/php.tools) support for Sublime Text 2/3
 
+### Installation
 
-php.fmt, php.tools and php.oracle aim to help PHP development. The following features are available through command palette (`ctrl+shift+P` or `cmd+shift+P`) :
+#### Requirements
+- **You must have a running copy of PHP on the machine you are running Sublime Text**
 
- *  phpfmt: toggle format on save - handy if the code is small and you don't want to worry about formatting.
- *  phpfmt: format now - if format on save is disabled, you can manually format the code.
- *  phpfmt: format selection - formats only the selected code
- *  phpfmt: toggle auto align - it aligns vertically equals and fat arrow symbols
- *  phpfmt: toggle indent with space - for those who don't *like* indentation with tabs.
- *  phpfmt: toggle visibility order - ensure PSR2 §4.2. `[final|static] [private|protected|public] [$variable|function]...`
- *  phpfmt: getter and setter (snake_case) - analyses the classes in the file and add setters/getters - set_variable()/get_variable()
- *  phpfmt: getter and setter (camelCase) - analyses the classes in the file and add setters/getters - setVariable()/getVariable()
- *  phpfmt: getter and setter (Go) - analyses the classes in the file and add setters/getters - SetVariable()/Variable()
- *  phpfmt: toggle merge else+if into elseif - convert `...} else if (...` into `...} elseif( ...`
- *  phpfmt: toggle convert long array into short array - convert array(...) into [...] automatically
- *  phpfmt: toggle yoda mode - change automatically condition evaluations from `$a == CONST` to `CONST == $a`
- *  phpfmt: toggle automatic preincrement/predecrement - convert from `$a++` to `++$a`
- *  phpfmt: toggle smart linebreak after open curly - when adding missing curly blocks in codes, it adds an extra line break after first added curly token. Thus:
- <pre>
- if ($a) $b;
- </pre>
- to
- <pre>
- if ($a) {
-     $b;
- }
- </pre>
+Plugin runs with PHP 5.6 or newer installed in the machine running the plugin.
 
+There is a backwards compatible mode with PHP 5.5 - however not all improvements will be available in this mode.
 
-Options which applies code analysis to work:
+#### Install this plugin through Package Manager.
 
- *  phpfmt: build autocomplete database - analyse the code and generates a database used for autocomplete and automatic insertion of dependencies
- *  phpfmt: toggle autocomplete - GoSublime autocomplete style
+- In Sublime Text press `ctrl+shift+P`
+- Choose `Package Control: Install Package`
+- Choose `phpfmt`
+
+#### Configuration (Windows)
+
+- Edit configuration file (`%AppData%\Sublime Text\Packages\phpfmt\phpfmt.sublime-settings`)
+- For field `"php_bin"` enter the path to the php.exe
+  Example: `"php_bin":"c:/PHP/php.exe"`
+
+#### Configuration (OS X and Linux)
+
+- Edit configuration file (`phpfmt.sublime-settings`)
+- For field `"php_bin"` enter the path to the php
+  Example: `"php_bin":"/usr/local/bin/php"`
+
+### Settings
+
+Prefer using the toggle options at command palette. However you might find yourself in need to setup where PHP is running, use this option below for the configuration file.
+```
+{
+"php_bin":"/usr/local/bin/php",
+}
+```
+
+**The following features are available through command palette (`ctrl+shift+P` or `cmd+shift+P`) :**
+
+ *  phpfmt: format now
+ *  phpfmt: indentation with spaces
+ *  phpfmt: toggle additional transformations
+ *  phpfmt: toggle excluded transformations
+ *  phpfmt: toggle skip execution when .php.tools.ini is missing
+ *  phpfmt: toggle auto align
+ *  phpfmt: toggle autocomplete
  *  phpfmt: toggle dependency autoimport
- *  phpfmt: analyse this - analyse the current word, and seek for information such: class hierarchical data, implemented interfaces and methods.
+ *  phpfmt: toggle format on save
+ *  phpfmt: toggle PSR1 - Class and Methods names
+ *  phpfmt: toggle PSR1
+ *  phpfmt: toggle PSR2
+ *  phpfmt: toggle smart linebreak after open curly
+ *  phpfmt: toggle visibility order
+ *  phpfmt: toggle yoda mode
+ *  phpfmt: analyse this
+ *  phpfmt: build autocomplete database
+ *  phpfmt: getter and setter (camelCase)
+ *  phpfmt: getter and setter (Go)
+ *  phpfmt: getter and setter (snake_case)
+ *  phpfmt: generate PHPDoc block
+ *  phpfmt: look for .php.tools.ini
+ *  phpfmt: reorganize content of class
+ *  phpfmt: refactor
+ *  phpfmt: toggle PHP 5.5 compatibility mode
+ *  phpfmt: enable/disable additional transformations
+ *  phpfmt: troubleshoot information
 
+
+### Currently Supported Transformations:
+
+ * AddMissingParentheses             Add extra parentheses in new instantiations.
+ * AliasToMaster                     Replace function aliases to their masters - only basic syntax alias.
+ * AlignDoubleArrow                  Vertically align T_DOUBLE_ARROW (=>).
+ * AlignDoubleSlashComments          Vertically align "//" comments.
+ * AlignEquals                       Vertically align "=".
+ * AlignGroupDoubleArrow             Vertically align T_DOUBLE_ARROW (=>) by line groups.
+ * AlignPHPCode                      Align PHP code within HTML block.
+ * AlignTypehint                     Vertically align "//" comments.
+ * AllmanStyleBraces                 Transform all curly braces into Allman-style.
+ * AutoPreincrement                  Automatically convert postincrement to preincrement.
+ * AutoSemicolon                     Add semicolons in statements ends.
+ * CakePHPStyle                      Applies CakePHP Coding Style
+ * ClassToSelf                       "self" is preferred within class, trait or interface.
+ * ClassToStatic                     "static" is preferred within class, trait or interface.
+ * ConvertOpenTagWithEcho            Convert from "<?=" to "<?php echo ".
+ * DocBlockToComment                 Replace docblocks with regular comments when used in non structural elements.
+ * DoubleToSingleQuote               Convert from double to single quotes.
+ * EncapsulateNamespaces             Encapsulate namespaces with curly braces
+ * GeneratePHPDoc                    Automatically generates PHPDoc blocks
+ * IndentTernaryConditions           Applies indentation to ternary conditions.
+ * JoinToImplode                     Replace implode() alias (join() -> implode()).
+ * LeftWordWrap                      Word wrap at 80 columns - left justify.
+ * LongArray                         Convert short to long arrays.
+ * MergeElseIf                       Merge if with else.
+ * MergeNamespaceWithOpenTag         Ensure there is no more than one linebreak before namespace
+ * MildAutoPreincrement              Automatically convert postincrement to preincrement. (Deprecated pass. Use AutoPreincrement instead).
+ * OrganizeClass                     Organize class, interface and trait structure.
+ * OrderMethod                       Organize class, interface and trait structure.
+ * OrderMethodAndVisibility          Organize class, interface and trait structure.
+ * OrderAndRemoveUseClauses          Order use block and remove unused imports.
+ * OnlyOrderUseClauses               Order use block - do not remove unused imports.
+ * PHPDocTypesToFunctionTypehint     Read variable types from PHPDoc blocks and add them in function signatures.
+ * PrettyPrintDocBlocks              Prettify Doc Blocks
+ * PSR2EmptyFunction                 Merges in the same line of function header the body of empty functions.
+ * PSR2MultilineFunctionParams       Break function parameters into multiple lines.
+ * ReindentAndAlignObjOps            Align object operators.
+ * ReindentSwitchBlocks              Reindent one level deeper the content of switch blocks.
+ * RemoveIncludeParentheses          Remove parentheses from include declarations.
+ * RemoveUseLeadingSlash             Remove leading slash in T_USE imports.
+ * ReplaceBooleanAndOr               Convert from "and"/"or" to "&&"/"||". Danger! This pass leads to behavior change.
+ * ReplaceIsNull                     Replace is_null($a) with null === $a.
+ * ReturnNull                        Simplify empty returns.
+ * ShortArray                        Convert old array into new array. (array() -> [])
+ * SmartLnAfterCurlyOpen             Add line break when implicit curly block is added.
+ * SortUseNameSpace                  Organize use clauses by length and alphabetic order.
+ * SpaceAroundExclamationMark        Add spaces around exclamation mark.
+ * SpaceAroundControlStructures      Add space around control structures.
+ * SpaceBetweenMethods               Put space between methods.
+ * StrictBehavior                    Activate strict option in array_search, base64_decode, in_array, array_keys, mb_detect_encoding. Danger! This pass leads to behavior change.
+ * StrictComparison                  All comparisons are converted to strict. Danger! This pass leads to behavior change.
+ * StripExtraCommaInArray            Remove trailing commas within array blocks
+ * StripNewlineAfterClassOpen        Strip empty lines after class opening curly brace.
+ * StripNewlineAfterCurlyOpen        Strip empty lines after opening curly brace.
+ * StripSpaces                       Remove all empty spaces
+ * StripSpaceWithinControlStructures Strip empty lines within control structures.
+ * TightConcat                       Ensure string concatenation does not have spaces, except when close to numbers.
+ * UpgradeToPreg                     Upgrade ereg_* calls to preg_*
+ * WordWrap                          Word wrap at 80 columns.
+ * WrongConstructorName              Update old constructor names into new ones. http://php.net/manual/en/language.oop5.decon.php
+ * YodaComparisons                   Execute Yoda Comparisons.
 
 ### What does it do?
+
 <table>
 <tr>
 <td>Before</td>
@@ -111,6 +206,7 @@ $d = new D();
 </table>
 
 ### What does it do? - PSR version
+
 <table>
 <tr>
 <td>Before</td>
@@ -191,35 +287,18 @@ $d = new D();
 </tr>
 </table>
 
-### Refactor
-phpfmt's Refactor is a smart find&replace command which takes in consideration the context of the tokens. Therefore, it safely skips changes within strings or comment blocks.
-
-- In Sublime Text press `ctrl+shift+P`
-- Choose `phpfmt: refactor`
-- Type the code which you want it to find.
-- Type the code which you want it to replace with.
-
-### Installation
-####Requirements
-- **You must have a running copy of PHP on the machine you are running Sublime Text**
-
-Plugin runs better with PHP 5.5 or newer installed in the machine running the plugin. It works with PHP 5.4 if formatting only PHP 5.4 codes. *Do not attempt to format PHP 5.5 code with PHP 5.4 binary.*
-
-####Install this plugin through Package Manager.
-- In Sublime Text press `ctrl+shift+P`
-- Choose `Package Control: Install Package`
-- Choose `phpfmt`
-
-####Configuration (Windows)
-- Edit configuration file located at `%AppData%\Sublime Text 2\Packages\phpfmt\phpfmt.sublime-settings`
-- For field `"php_bin"` enter the path to the php.exe
-  Example: `"php_bin":"c:/PHP/php.exe"`
-
-### Settings
-Prefer using the toggle options at command palette. However you might find yourself in need to setup where PHP is running, use this option below for the configuration file.
-```
-"php_bin":"/usr/local/bin/php",
-```
-
 ### Troubleshooting
-- If php errors appears make sure you can run PHP from the command line
+- Be sure you can run PHP from the command line.
+- If you need support, please open an issue at [php.tools issues](https://github.com/phpfmt/php.tools/issues)
+
+### The Most FAQ
+
+***I want to use sublime-phpfmt, but it needs PHP 5.6 or newer and on my production
+server I have PHP 5.5 or older. What should I do?***
+
+Consider installing a standalone PHP 5.6 in a separate directory and have it *not*
+configured in the environment. Within the plugin, ensure `php_bin` parameter is pointed to this standalone installation.
+
+### Acknowledgements
+- GoSublime - for the method to update the formatted buffer
+- Google's diff match patch - http://code.google.com/p/google-diff-match-patch/

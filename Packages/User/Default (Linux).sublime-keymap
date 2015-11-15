@@ -107,6 +107,16 @@
   //{ "keys": ["ctrl+j"], "command": "join_lines" },
   //{ "keys": ["ctrl+shift+d"], "command": "duplicate_line" },
 
+
+//    "https://github.com/facelessuser/BracketHighlighter/tree/ST3",
+//    "https://github.com/SublimeCodeIntel/SublimeCodeIntel",
+//    "https://github.com/buymeasoda/soda-theme/",
+//    "https://github.com/titoBouzout/SideBarEnhancements",
+//    "https://github.com/SublimeText/WordHighlight",
+//    "https://github.com/astronaughts/SublimeOpenFromPath"
+
+  { "keys": ["ctrl+/"], "command": "toggle_comment", "args": { "block": false } },
+  { "keys": ["ctrl+alt+c"], "command": "toggle_comment", "args": { "block": true } },
   { "keys": ["ctrl+alt+f"], "command": "fold" },
   { "keys": ["ctrl+alt+u"], "command": "unfold" },
   { "keys": ["ctrl+alt+f", "ctrl+1"], "command": "fold_by_level", "args": {"level": 1} },

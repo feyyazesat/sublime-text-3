@@ -1,0 +1,73 @@
+{
+	"9o.hist./var/golang/src/github.com/feyyazesat/hello":
+	[
+		"go fmt",
+		"go run go run  hello.go",
+		"go list",
+		"go run  hello",
+		"go run  hello.go",
+		"help",
+		"replay",
+		"tskill",
+		"go go run  hello.go",
+		"g go run  hello.go",
+		"go clean",
+		"go build",
+		"go install",
+		"go run",
+		"go run hello.go",
+		"go run test.go"
+	],
+	"9o.hist./var/golang/src/github.com/feyyazesat/rest-api":
+	[
+		"go run",
+		"go get gopkg.in/yaml.v2",
+		"go clean",
+		"go run offerDetail.go  hello",
+		"go run offerDetail.go  hello  asdf asdf",
+		"go run offerDetail.go  --parameters",
+		"go run offerDetail.go  -parameters",
+		"go run offerDetail.go  parameters",
+		"go run offerDetail.go  -c",
+		"go run offerDetail.go  -c hellokitty",
+		"go run offerDetail.go  -p  hellokitty",
+		"go run offerDetail.go  -p hellokitty",
+		"go build -gcflags -S offerDetail.go",
+		"ls",
+		"n",
+		"go get github.com/garyburd/redigo/redis",
+		"go run offerDetail.go"
+	],
+	"9o.hist./var/golang/src/github.com/feyyazesat/simmetrica":
+	[
+		"go run",
+		"go get",
+		"go doc httprouter",
+		"go doc",
+		"go build",
+		"go run simmetrica-app.go"
+	],
+	"9o.hist./var/golang/src/github.com/feyyazesat/stringutil":
+	[
+		"go build",
+		"go list"
+	],
+	"9o.hist./var/golang/src/github.com/feyyazesat/test":
+	[
+		"go run test.go"
+	],
+	"9o.hist./var/golang/src/github.com/jmhodges/jsonpp":
+	[
+		"go list",
+		"go run",
+		"go run  js",
+		"go run  jsonpp",
+		"go run  jsonpp.go",
+		"go run  jsonpp.go  help",
+		"../../../../bin/jsonpp",
+		"go install"
+	],
+	"ann": "a14.02.25-1",
+	"install_version": "r14.12.06-1",
+	"version": "r14.12.06-1"
+}

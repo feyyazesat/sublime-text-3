@@ -1,17 +1,11 @@
 {
+	"bootstrapped": true,
 	"in_process_packages":
 	[
-	],
-	"installed_dependencies":
-	[
-		"0_package_control_loader",
-		"bz2",
-		"ssl-linux"
 	],
 	"installed_packages":
 	[
 		"AutoBackups",
-		"Better Completion",
 		"BracketHighlighter",
 		"Compass",
 		"CTags",
@@ -19,9 +13,13 @@
 		"FileDiffs",
 		"Git",
 		"Git Config",
+		"GoGdb",
+		"GoSublime",
 		"Gutter Color",
 		"HTML-CSS-JS Prettify",
 		"JSLint",
+		"Markdown Preview",
+		"MarkdownEditing",
 		"Package Control",
 		"Phpcs",
 		"phpfmt",
@@ -30,6 +28,7 @@
 		"SFTP",
 		"SideBarEnhancements",
 		"soda-theme",
+		"SqlBeautifier",
 		"sublime-github",
 		"SublimeLinter",
 		"SublimeLinter-jshint",
@@ -45,11 +44,5 @@
 	],
 	"repositories":
 	[
-		"https://github.com/facelessuser/BracketHighlighter/tree/ST3",
-		"https://github.com/SublimeCodeIntel/SublimeCodeIntel",
-		"https://github.com/buymeasoda/soda-theme/",
-		"https://github.com/titoBouzout/SideBarEnhancements",
-		"https://github.com/SublimeText/WordHighlight",
-		"https://github.com/astronaughts/SublimeOpenFromPath"
 	]
 }

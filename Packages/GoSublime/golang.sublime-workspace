@@ -1,0 +1,3248 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"DEFAULT",
+				"DEFAULT_RESOLUTION	 Ɩ"
+			],
+			[
+				"time",
+				"timespanAsSec	uint64 ν"
+			],
+			[
+				"DEFA",
+				"DEFAULT_REDIS_HOST	 Ɩ"
+			],
+			[
+				"Spr",
+				"Sprintf	string ƒ"
+			],
+			[
+				"Chan",
+				"ChanDir	int ʈ"
+			],
+			[
+				"Typ",
+				"TypeOf	reflect.Type ƒ"
+			],
+			[
+				"ke",
+				"KeyValue	struct ʈ"
+			],
+			[
+				"redis",
+				"redisHost	string ν"
+			],
+			[
+				"IPAdd",
+				"ResolveIPAddr	*net.IPAddr, error ƒ"
+			],
+			[
+				"Addr",
+				"InterfaceAddrs	[]net.Addr, error ƒ"
+			],
+			[
+				"Ha",
+				"Handler	 ƒ"
+			],
+			[
+				"Hand",
+				"HandlerFunc	 ƒ"
+			],
+			[
+				"Handl",
+				"Handler	 ƒ"
+			],
+			[
+				"Han",
+				"Handle	 ƒ"
+			],
+			[
+				"p",
+				"Path	string ν"
+			],
+			[
+				"sprin",
+				"Sprintf	string ƒ"
+			],
+			[
+				"Int",
+				"IntVar	 ƒ"
+			],
+			[
+				"redisC",
+				"redisConnection	interface{} ν"
+			],
+			[
+				"sp",
+				"Sprintf	string ƒ"
+			],
+			[
+				"Prin",
+				"Printf	n int, err error ƒ"
+			],
+			[
+				"PARAMETER",
+				"PARAMETERS_FLAG	 Ɩ"
+			],
+			[
+				"fpr",
+				"Fprintln	n int, err error ƒ"
+			],
+			[
+				"spr",
+				"Sprintln	string ƒ"
+			],
+			[
+				"Print",
+				"Println	n int, err error ƒ"
+			],
+			[
+				"pr",
+				"Println	n int, err error ƒ"
+			],
+			[
+				"fileconte",
+				"filecontentString	string ν"
+			],
+			[
+				"Pr",
+				"Println	n int, err error ƒ"
+			],
+			[
+				"Open",
+				"OpenFile	file *os.File, err error ƒ"
+			],
+			[
+				"json_",
+				"json_encode"
+			],
+			[
+				"collect",
+				"collectionId"
+			],
+			[
+				"collec",
+				"collectionId"
+			],
+			[
+				"mistyp",
+				"mistypings"
+			],
+			[
+				"mis",
+				"mistyping"
+			],
+			[
+				"savedSear",
+				"savedSearchService"
+			],
+			[
+				"Exce",
+				"ExceptionWrapper"
+			],
+			[
+				"get_cla",
+				"get_class"
+			],
+			[
+				"required",
+				"requiredPhoneCollection"
+			],
+			[
+				"new",
+				"newPhotos"
+			],
+			[
+				"parameters",
+				"parametersJson"
+			],
+			[
+				"campa",
+				"campaignSliderResults"
+			],
+			[
+				"get_class",
+				"get_class_methods"
+			],
+			[
+				"func_get",
+				"func_get_args"
+			],
+			[
+				"listin",
+				"listingTypeSlug"
+			],
+			[
+				"phone2",
+				"phone2NotEqualTo"
+			],
+			[
+				"get_cl",
+				"get_class_methods"
+			],
+			[
+				"sphinx",
+				"sphinxClient"
+			],
+			[
+				"get_c",
+				"get_called_class"
+			],
+			[
+				"func_",
+				"func_get_args"
+			],
+			[
+				"dist",
+				"districtId"
+			],
+			[
+				"loca",
+				"locationIds"
+			],
+			[
+				"dis",
+				"districtId"
+			],
+			[
+				"para",
+				"parameters"
+			],
+			[
+				"sf",
+				"sfcommandca	Symfony2 / Command / Command class (container aware)"
+			],
+			[
+				"require",
+				"requiredItemsCount"
+			],
+			[
+				"funct",
+				"func_get_arg"
+			],
+			[
+				"natureAttr",
+				"naturesAttributes"
+			],
+			[
+				"memberSUbs",
+				"memberSubscriptionService"
+			],
+			[
+				"memberSubsc",
+				"memberSubscriptionSlug"
+			],
+			[
+				"equ",
+				"equipmentSlug"
+			],
+			[
+				"offerPhoto",
+				"offerPhotoService"
+			],
+			[
+				"vehic",
+				"vehicleTypeImage"
+			],
+			[
+				"useCa",
+				"useCampaignSlider"
+			],
+			[
+				"model",
+				"modelSlug"
+			],
+			[
+				"brand",
+				"brandSlug"
+			],
+			[
+				"Entity",
+				"EntityRepository"
+			],
+			[
+				"matc",
+				"matchesOrdered"
+			],
+			[
+				"hie",
+				"hierarchicalGroupMemberIdsSingleDim"
+			],
+			[
+				"tempora",
+				"temporaryPhotos"
+			],
+			[
+				"sfre",
+				"sfrepo	Symfony2 Get Repository"
+			],
+			[
+				"sess",
+				"sessionKey"
+			],
+			[
+				"getGroupNameBy",
+				"getGroupNameByUserId"
+			],
+			[
+				"fill",
+				"fillUpWithNonShowcase"
+			],
+			[
+				"vehicle",
+				"vehicleType"
+			],
+			[
+				"vehicleT",
+				"vehicleTypes"
+			],
+			[
+				"getShow",
+				"getShowcaseByAllTypes"
+			],
+			[
+				"SORT_BY_",
+				"SORT_BY_RENEWED_AT"
+			],
+			[
+				"sortBy",
+				"sortByOptions"
+			],
+			[
+				"fiel",
+				"fieldWeights"
+			],
+			[
+				"FT_FIELD_WEIGHT_MEMBER",
+				"FT_FIELD_WEIGHT_MEMBER_COMPANY_NAME_SHORT"
+			],
+			[
+				"query",
+				"queryResult"
+			],
+			[
+				"SPH",
+				"SPHINX_PORT"
+			],
+			[
+				"replace",
+				"replacePatterns"
+			],
+			[
+				"sf_guard",
+				"sf_guard_user"
+			],
+			[
+				"is",
+				"is_cell_phone_confirmed"
+			],
+			[
+				"co_",
+				"co_business_user_id"
+			],
+			[
+				"galeri",
+				"galerioutput"
+			],
+			[
+				"sfG",
+				"sfGuardUserTable"
+			],
+			[
+				"master",
+				"master_nature"
+			],
+			[
+				"sfGUardUser",
+				"sfGuardUserTable"
+			],
+			[
+				"groupUser",
+				"groupUserId"
+			],
+			[
+				"isMaster",
+				"isMasterBusiness"
+			],
+			[
+				"match",
+				"matchDealer"
+			],
+			[
+				"group",
+				"groupPrefix"
+			],
+			[
+				"groupPr",
+				"groupPrefixes"
+			],
+			[
+				"tasitblog",
+				"tasitblog_get_base_cdn_url"
+			],
+			[
+				"accep",
+				"accepted_args"
+			],
+			[
+				"gallery_im",
+				"gallery_image_ids"
+			],
+			[
+				"get_class_",
+				"get_class_vars"
+			],
+			[
+				"gallery_",
+				"gallery_image_ids"
+			],
+			[
+				"offer_so",
+				"offer_source_callback_source"
+			],
+			[
+				"function",
+				"function_exists"
+			],
+			[
+				"call",
+				"callbackSourceJson"
+			],
+			[
+				"callb",
+				"callbackSourceJsonEncoded"
+			],
+			[
+				"callback",
+				"callbackSourceEncoded"
+			],
+			[
+				"gallery_images",
+				"gallery_images_count  (variable)"
+			],
+			[
+				"array",
+				"array"
+			],
+			[
+				"licen",
+				"licencePlateDb"
+			],
+			[
+				"licencePl",
+				"licencePlateDb"
+			],
+			[
+				"curr_image",
+				"curr_image_link"
+			],
+			[
+				"licence_p",
+				"licence_plate_code"
+			],
+			[
+				"licencePlateD",
+				"licencePlateDbRow"
+			],
+			[
+				"redirect",
+				"redirect404"
+			],
+			[
+				"licence",
+				"licence_plate_db"
+			],
+			[
+				"licence_plate",
+				"licence_plate_db"
+			],
+			[
+				"driverLice",
+				"driverLicencePlateForm"
+			],
+			[
+				"licence_",
+				"licence_plate_code"
+			],
+			[
+				"registry_",
+				"registry_id_number"
+			],
+			[
+				"validator",
+				"validatorSchema"
+			],
+			[
+				"validat",
+				"validationField"
+			],
+			[
+				"valid",
+				"validationField"
+			],
+			[
+				"valida",
+				"validationFields"
+			],
+			[
+				"d",
+				"disabled	Attr"
+			],
+			[
+				"co",
+				"co_business_user_id"
+			],
+			[
+				"gallery_image",
+				"gallery_image_with_pagination"
+			],
+			[
+				"sf_guard_",
+				"sf_guard_user_id"
+			],
+			[
+				"forard",
+				"forward404Unless"
+			],
+			[
+				"check",
+				"checkTaxIdentificationNumber  (function)"
+			],
+			[
+				"sfV",
+				"sfView  (class)"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "/var/golang/src/github.com/feyyazesat/simmetrica/simmetrica.go",
+			"settings":
+			{
+				"buffer_size": 6516,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/var/golang/src/github.com/feyyazesat/simmetrica/simmlib/simmlib.go",
+			"settings":
+			{
+				"buffer_size": 4947,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/var/golang/src/github.com/feyyazesat/simmetrica/simmlib/simmlib_test.go",
+			"settings":
+			{
+				"buffer_size": 580,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/var/golang/src/github.com/feyyazesat/test/test.go",
+			"settings":
+			{
+				"buffer_size": 707,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/var/golang/src/github.com/garyburd/redigo/redis/conn_test.go",
+			"settings":
+			{
+				"buffer_size": 11242,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/usr/local/go/src/fmt/print.go",
+			"settings":
+			{
+				"buffer_size": 30347,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/usr/local/go/src/fmt/doc.go",
+			"settings":
+			{
+				"buffer_size": 12270,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/var/golang/src/github.com/feyyazesat/simmetrica/simmetrica-app.py",
+			"settings":
+			{
+				"buffer_size": 4581,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/var/golang/src/github.com/feyyazesat/simmetrica/config/config.yml",
+			"settings":
+			{
+				"buffer_size": 1589,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/var/golang/src/github.com/feyyazesat/simmetrica/simmetrica.py",
+			"settings":
+			{
+				"buffer_size": 2246,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"command_palette":
+	{
+		"height": 375.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"public",
+				"GitHub: Public Gist from Selection"
+			],
+			[
+				"private",
+				"GitHub: Private Gist from Selection"
+			],
+			[
+				"backup",
+				"AutoBackups: Open file backup"
+			],
+			[
+				"priva",
+				"GitHub: Private Gist from Selection"
+			],
+			[
+				"GoSublime: ",
+				"GoSublime: Activate 9o"
+			],
+			[
+				"GoSublime: sani",
+				"GoSublime: Do a sanity check"
+			],
+			[
+				"GoSublime: doc",
+				"GoSublime: Do a sanity check"
+			],
+			[
+				"GoSublime: bu",
+				"GoSublime: Run build command"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"format",
+				"phpfmt: format now"
+			],
+			[
+				"phpfmt",
+				"phpfmt: format now"
+			],
+			[
+				"symfony",
+				"SfCommand: Custom:Symfony Command"
+			],
+			[
+				"inden",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"html",
+				"HTMLPrettify"
+			],
+			[
+				"asset",
+				"SfCommand: Assetic:Dump"
+			],
+			[
+				"git ",
+				"Git: Commit history"
+			],
+			[
+				"git hist",
+				"GitHub: History"
+			],
+			[
+				"git histor",
+				"GitHub: History"
+			],
+			[
+				"aut",
+				"AutoBackups: Open file backup"
+			],
+			[
+				"auto",
+				"AutoBackups: Open file backup"
+			],
+			[
+				"au",
+				"AutoBackups: Open file backup"
+			],
+			[
+				"fmt",
+				"phpfmt: format now"
+			],
+			[
+				"refac",
+				"phpfmt: refactor"
+			],
+			[
+				"schema",
+				"SfCommand: Doctrine:Schema Validate"
+			],
+			[
+				"doctrin",
+				"SfCommand: Doctrine:Schema Validate"
+			],
+			[
+				"form",
+				"phpfmt: format now"
+			],
+			[
+				"upgrade",
+				"Package Control: Upgrade Package"
+			],
+			[
+				"pretty",
+				"Pretty JSON: Format (Pretty Print) JSON"
+			],
+			[
+				"fmt now",
+				"phpfmt: format now"
+			],
+			[
+				"refactor",
+				"phpfmt: refactor"
+			],
+			[
+				"doctrine",
+				"SfCommand: Doctrine:Schema Validate"
+			],
+			[
+				"cache",
+				"SfCommand: Cache:Clear(Dev)"
+			],
+			[
+				"clear",
+				"Xdebug: Clear All Breakpoints"
+			],
+			[
+				"router",
+				"SfCommand: Router:Debug"
+			],
+			[
+				"debug",
+				"SfCommand: Router:Debug"
+			],
+			[
+				"cache:clear",
+				"SfCommand: Cache:Clear(Dev)"
+			],
+			[
+				"controller",
+				"SfCommand: Generate:Controller"
+			],
+			[
+				"github: gist",
+				"GitHub: Open Gist in Editor"
+			],
+			[
+				"disable",
+				"Package Control: Disable Package"
+			],
+			[
+				"enable pa",
+				"Package Control: Enable Package"
+			],
+			[
+				"disable pack",
+				"Package Control: Disable Package"
+			],
+			[
+				"enable pack",
+				"Package Control: Enable Package"
+			],
+			[
+				"enable",
+				"Preferences: Alignment Key Bindings – Default"
+			],
+			[
+				"gitconfig",
+				"Set Syntax: Git Config"
+			],
+			[
+				"gitconfi",
+				"Set Syntax: Git Config"
+			],
+			[
+				"package",
+				"Preferences: Package Control Settings – User"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"Github: gist",
+				"GitHub: Open Starred Gist in Editor"
+			],
+			[
+				"Gist",
+				"GitHub: Open Gist in Editor"
+			],
+			[
+				"gist",
+				"Git: Show Current File"
+			],
+			[
+				"github",
+				"GitHub: Private Gist from Selection"
+			],
+			[
+				"enable pac",
+				"Package Control: Enable Package"
+			],
+			[
+				"update",
+				"Emmet: Update Image Size"
+			],
+			[
+				"backups",
+				"AutoBackups: Open file backup"
+			],
+			[
+				"minify",
+				"Pretty JSON: Minify (compress) JSON"
+			],
+			[
+				"xdebug",
+				"Set Syntax: Xdebug"
+			],
+			[
+				"diff",
+				"FileDiffs: Menu"
+			],
+			[
+				"filediff",
+				"FileDiffs: Menu"
+			],
+			[
+				"gitk",
+				"Git: Gitk"
+			],
+			[
+				"sass",
+				"Set Syntax: Sass"
+			],
+			[
+				"Snippet",
+				"Snippet: Function Signature"
+			],
+			[
+				"add repo",
+				"Package Control: Add Repository"
+			],
+			[
+				"disable ",
+				"Package Control: Disable Package"
+			],
+			[
+				"disable p",
+				"Package Control: Disable Package"
+			],
+			[
+				"pretty yml",
+				"Pretty YAML: Reformat (Pretty Print) YAML"
+			],
+			[
+				"json",
+				"Pretty JSON: JSON query with ./jq"
+			],
+			[
+				"pretty json",
+				"Pretty JSON: JSON query with ./jq"
+			],
+			[
+				"install pa",
+				"Package Control: Install Package"
+			],
+			[
+				"upgr",
+				"Package Control: Upgrade Package"
+			],
+			[
+				"add rep",
+				"Package Control: Add Repository"
+			],
+			[
+				"filediffs",
+				"FileDiffs: Menu"
+			],
+			[
+				"add",
+				"Package Control: Add Repository"
+			],
+			[
+				"codeIntel",
+				"PHP Code Sniffer: Sniff this file"
+			],
+			[
+				":w",
+				":w - Save"
+			],
+			[
+				"Enable",
+				"Package Control: Enable Package"
+			],
+			[
+				"install ",
+				"Package Control: Install Package"
+			],
+			[
+				"reposity",
+				"Package Control: Add Repository"
+			],
+			[
+				"install p",
+				"Package Control: Install Package"
+			],
+			[
+				"alignment",
+				"Preferences: Alignment File Settings – Default"
+			],
+			[
+				"instl",
+				"Package Control: Install Package"
+			],
+			[
+				"turn ex",
+				"PHP Code Sniffer: Turn Execute On Save Off"
+			],
+			[
+				"phpcs",
+				"PHP Code Sniffer: Turn Execute On Save On"
+			],
+			[
+				"command",
+				"Git: Custom Command"
+			],
+			[
+				"trai",
+				"Trailing Spaces: Delete Trailing Spaces"
+			],
+			[
+				"trailing",
+				"Trailing Spaces: Toggle Trailing Spaces Highlighting"
+			],
+			[
+				"linter",
+				"Preferences: SublimeLinter Settings – User"
+			],
+			[
+				"sublimelinter",
+				"SublimeLinter: Clear Caches"
+			],
+			[
+				"install package",
+				"Package Control: Install Package"
+			],
+			[
+				"clear ",
+				"SublimeLinter: Clear Caches"
+			],
+			[
+				"sublimelin",
+				"SublimeLinter: Next Error"
+			],
+			[
+				"sublime",
+				"SublimeCodeIntel: Reset"
+			],
+			[
+				"add re",
+				"Package Control: Add Repository"
+			],
+			[
+				"Package Control: insta",
+				"Package Control: Install Package"
+			],
+			[
+				"emmet",
+				"Emmet: Merge Lines"
+			],
+			[
+				"git:c",
+				"Git: Change Branch"
+			],
+			[
+				"git:checout",
+				"Git: Checkout Tag"
+			],
+			[
+				"git:push",
+				"Git: Push Current Branch"
+			],
+			[
+				"git:merge",
+				"Git: Merge Branch"
+			],
+			[
+				"git:",
+				"Git: Pull Using Rebase"
+			],
+			[
+				"git:fetch",
+				"Git: Fetch"
+			],
+			[
+				"git:commit",
+				"Git: Commit"
+			],
+			[
+				"git:add",
+				"Git: Add..."
+			],
+			[
+				"switch",
+				"PHP Code Sniffer: Switch coding standard"
+			],
+			[
+				"sublimelinter:showa",
+				"SublimeLinter: Show Errors on Save"
+			],
+			[
+				"sublimelinter:",
+				"SublimeLinter: Show All Errors"
+			],
+			[
+				"git:status",
+				"Git: Status"
+			],
+			[
+				"Package Control: install",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: instal",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: in",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Add Repository"
+			],
+			[
+				"Repo",
+				"Preferences: Browse Packages"
+			]
+		],
+		"width": 525.0
+	},
+	"console":
+	{
+		"height": 302.0,
+		"history":
+		[
+			"view.run_command('xdebugListener')",
+			"view.run_command('XdebugListener')",
+			"XdebugListenerCommand",
+			"User.xdebug_listener",
+			"xdebug_listener",
+			"run",
+			"XdebugListenerCommand",
+			"ls"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/var/golang",
+		"/var/golang/src",
+		"/var/golang/src/github.com",
+		"/var/golang/src/github.com/feyyazesat",
+		"/var/golang/src/github.com/feyyazesat/simmetrica",
+		"/var/golang/src/github.com/feyyazesat/simmetrica/config",
+		"/var/golang/src/github.com/feyyazesat/stringutil",
+		"/var/golang/src/github.com/feyyazesat/test",
+		"/var/golang/src/github.com/garyburd",
+		"/var/golang/src/github.com/garyburd/redigo",
+		"/var/golang/src/github.com/garyburd/redigo/redis",
+		"/var/golang/src/github.com/koding",
+		"/var/golang/src/github.com/koding/redis"
+	],
+	"file_history":
+	[
+		"/var/golang/src/github.com/feyyazesat/simmetrica/simmetrica-app.go",
+		"/var/golang/src/github.com/feyyazesat/test/test.go",
+		"/var/golang/src/github.com/garyburd/redigo/redis/redis.go",
+		"/var/golang/src/github.com/koding/redis/redis.go",
+		"/var/golang/src/github.com/garyburd/redigo/redis/conn.go",
+		"/var/web/www/q8dvd/composer.json",
+		"/var/golang/src/github.com/feyyazesat/simmetrica/README.md",
+		"/var/golang/src/github.com/garyburd/redigo/redis/zpop_example_test.go",
+		"/var/golang/src/github.com/Shopify/go-lua/vm.go",
+		"/var/golang/src/github.com/feyyazesat/simmetrica/templates/index.html",
+		"/var/golang/src/github.com/Shopify/go-lua/undump_test.go",
+		"/usr/local/go/src/time/time.go",
+		"/var/golang/src/github.com/Shopify/go-lua/README.md",
+		"/var/golang/src/github.com/feyyazesat/simmetrica/config/config.yml",
+		"/usr/local/go/src/sync/mutex.go",
+		"/usr/local/go/src/sync/race.go",
+		"/usr/local/go/src/sync/waitgroup.go",
+		"/home/feyyazesat/Desktop/920564a-3b8b51a.js",
+		"/home/feyyazesat/Desktop/5ecb9c3-a4cab31.js",
+		"/usr/local/go/src/sync/race0.go",
+		"/var/golang/src/github.com/feyyazesat/clpolling/client.go",
+		"/var/golang/src/github.com/feyyazesat/simmetrica/lib/simmetrica.go",
+		"/home/feyyazesat/Desktop/test.output1",
+		"/home/feyyazesat/Desktop/test.output",
+		"/var/golang/src/github.com/feyyazesat/polling/poll.go",
+		"/var/golang/src/github.com/feyyazesat/rest-api/offerDetail.go",
+		"/var/golang/src/gopkg.in/yaml.v2/yaml.go",
+		"/var/golang/src/github.com/feyyazesat/hello/hello.go",
+		"/var/golang/src/github.com/feyyazesat/hello/test.go",
+		"/usr/local/go/src/io/ioutil/ioutil.go",
+		"/usr/local/go/src/net/http/doc.go",
+		"/usr/local/go/src/flag/flag.go",
+		"/var/golang/src/github.com/feyyazesat/stringutil/reverse.go",
+		"/home/feyyazesat/.config/sublime-text-3/File Backups/2015-02-11/var/golang/src/github.com/feyyazesat/hello/hello_210806.go",
+		"/home/feyyazesat/.config/sublime-text-3/File Backups/2015-02-11/var/golang/src/github.com/feyyazesat/hello/hello_233057.go",
+		"/home/feyyazesat/.config/sublime-text-3/File Backups/2015-02-11/var/golang/src/github.com/feyyazesat/hello/hello_224332.go",
+		"/home/feyyazesat/.config/sublime-text-3/File Backups/2015-02-11/var/golang/src/github.com/feyyazesat/hello/hello_110013.go",
+		"/home/feyyazesat/.config/sublime-text-3/File Backups/2015-02-11/var/golang/src/github.com/feyyazesat/hello/hello_220831.go",
+		"/home/feyyazesat/.config/sublime-text-3/File Backups/2015-02-11/var/golang/src/github.com/feyyazesat/hello/hello_233126.go",
+		"/home/feyyazesat/.config/sublime-text-3/File Backups/2015-02-11/var/golang/src/github.com/feyyazesat/hello/hello_232555.go",
+		"/home/feyyazesat/.config/sublime-text-3/File Backups/2015-02-11/var/golang/src/github.com/feyyazesat/hello/hello_215436.go",
+		"/home/feyyazesat/.config/sublime-text-3/Packages/GoSublime/GoSublime.sublime-settings",
+		"/home/feyyazesat/.config/sublime-text-3/Packages/User/GoSublime.sublime-settings",
+		"/home/feyyazesat/.config/sublime-text-3/Packages/GoSublime/CHANGELOG.md",
+		"/usr/local/go/src/os/file.go",
+		"/var/golang/src/github.com/jmhodges/jsonpp/jsonpp.go",
+		"/home/feyyazesat/.zshrc",
+		"/home/feyyazesat/.oh-my-zsh/themes/feyyazesat.zsh-theme",
+		"/var/golang/src/golang.org/x/tools/cover/profile.go",
+		"/var/golang/src/golang.org/x/tools/PATENTS",
+		"/home/feyyazesat/.config/sublime-text-3/Packages/GoSublime/9o.md",
+		"/usr/local/go/src/builtin/builtin.go",
+		"/usr/local/go/src/math/nextafter.go",
+		"/usr/local/go/src/math/rand/rand.go",
+		"/home/feyyazesat/.config/sublime-text-3/Packages/User/GoSublime/linux-x64/log.txt",
+		"/usr/local/go/src/fmt/doc.go",
+		"/home/feyyazesat/.config/sublime-text-3/Packages/GoSublime/USAGE.md",
+		"/usr/bin/2to3-2.7",
+		"/home/feyyazesat/.config/sublime-text-3/Packages/GoSublime/README.md",
+		"/usr/local/go/src/unicode/utf16/export_test.go",
+		"/home/feyyazesat/.config/sublime-text-3/Packages/GoSublime/golang.sublime-project",
+		"/var/web/www/rest-api/src/Tasit/ApiBundle/Entity/StaticPage.php",
+		"/var/web/www/rest-api/bin/security-checker",
+		"/var/web/www/rest-api/src/Tasit/ApiBundle/Service/RentalService.php",
+		"/var/web/www/rest-api/src/Tasit/ApiBundle/Service/UserService.php",
+		"/var/web/www/rest-api/src/Tasit/ApiBundle/Repository/ImageUploadTemporaryRepository.php",
+		"/var/web/www/rest-api/src/Tasit/ApiBundle/Entity/RentExtra.php",
+		"/var/web/www/rest-api/README.md",
+		"/var/web/www/rest-api/src/Tasit/ApiBundle/Model/RentBookingCancelRequest.php",
+		"/var/web/www/rest-api/src/Tasit/ApiBundle/Entity/RentBooking.php",
+		"/var/web/www/rest-api/src/Tasit/ApiBundle/Resources/tools/release_notes.sh",
+		"/var/web/www/rest-api/src/Tasit/ApiBundle/Service/OfferSearchService.php",
+		"/var/web/www/rest-api/src/Tasit/ApiBundle/Repository/OfferRepository.php",
+		"/var/web/www/rest-api/src/Tasit/ApiBundle/Search/Adapter/SphinxAdapter.php",
+		"/var/web/www/sandbox/vendor/sonata-project/ecommerce/src/ProductBundle/Entity/BaseProduct.php",
+		"/var/web/www/rest-api/src/Tasit/ApiBundle/Entity/Group.php",
+		"/var/web/www/rest-api/src/Tasit/ApiBundle/Entity/User.php",
+		"/var/web/www/rest-api/src/Tasit/ApiBundle/Service/MemberService.php",
+		"/var/web/www/rest-api/src/Tasit/ApiBundle/Controller/SalesRepresentativeController.php",
+		"/var/web/www/rest-api/app/config/parameters.yml",
+		"/var/web/www/rest-api/src/Tasit/ApiBundle/Entity/WpUsers.php",
+		"/home/feyyazesat/.config/sublime-text-3/Packages/User/phpfmt.sublime-settings",
+		"/var/web/www/rest-api/src/Tasit/ApiBundle/Command/ConvertApiDocToPostmanCommand.php",
+		"/home/feyyazesat/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
+		"/home/feyyazesat/.config/sublime-text-3/Packages/Default/Preferences.sublime-settings",
+		"/home/feyyazesat/.config/sublime-text-3/Packages/Default/Default (Linux).sublime-keymap",
+		"/home/feyyazesat/Desktop/api-doc.html",
+		"/var/web/www/rest-api/src/Tasit/ApiBundle/Command/FixLocationSlugsCommand.php",
+		"/home/feyyazesat/Desktop/get/Backup.postman_dump.json",
+		"/home/feyyazesat/Desktop/apidoc.html",
+		"/home/feyyazesat/Desktop/postman.json",
+		"/home/feyyazesat/Desktop/get/Backup2.postman_dump.json",
+		"/home/feyyazesat/Desktop/get/postman.backup.json",
+		"/home/feyyazesat/Desktop/get/postman.txt",
+		"/var/web/www/phpmyadmin/config.inc.php",
+		"/home/feyyazesat/Downloads/config.inc.php",
+		"/var/web/www/rest-api/web/app_dev.php",
+		"/home/feyyazesat/.config/sublime-text-3/Projects/rest-api.sublime-project",
+		"/var/web/www/rest-api/app/config/config.yml",
+		"/home/web/projects/tasit/rest-api/src/Tasit/ApiBundle/Controller/UserController.php",
+		"/home/web/projects/tasit/rest-api/src/Tasit/ApiBundle/Service/OfferService.php",
+		"/home/web/projects/tasit/rest-api/src/Tasit/ApiBundle/Controller/CarParkController.php",
+		"/home/web/projects/tasit/rest-api/src/Tasit/ApiBundle/Service/MemberService.php",
+		"/home/web/projects/tasit/rest-api/src/Tasit/ApiBundle/Repository/OfferRepository.php",
+		"/home/web/projects/tasit/rest-api/src/Tasit/ApiBundle/Entity/MemberContact.php",
+		"/home/web/projects/tasit/rest-api/src/Tasit/ApiBundle/Service/OfferSearchService.php",
+		"/home/web/projects/tasit/rest-api/src/Tasit/ApiBundle/Service/VehicleAttributeService.php",
+		"/home/web/projects/tasit/rest-api/src/Tasit/ApiBundle/Command/FixLocationSlugsCommand.php",
+		"/home/web/projects/tasit/rest-api/src/Tasit/ApiBundle/Service/SavedSearchService.php",
+		"/home/web/projects/tasit/rest-api/vendor/symfony/symfony/src/Symfony/Component/Validator/Constraints/Collection.php",
+		"/home/web/projects/tasit/rest-api/src/Tasit/ApiBundle/Repository/VehicleVariantRepository.php",
+		"/home/web/projects/tasit/rest-api/src/Tasit/ApiBundle/Controller/DataController.php",
+		"/home/web/projects/tasit/rest-api/src/Tasit/ApiBundle/Controller/SavedSearchController.php",
+		"/home/web/projects/tasit/rest-api/src/Tasit/ApiBundle/Controller/OfferPhotoController.php",
+		"/home/feyyazesat/.config/sublime-text-3/Packages/CTags/CTags.sublime-settings",
+		"/home/web/projects/tasit/rest-api/vendor/symfony/symfony/src/Symfony/Component/Intl/Resources/data/locales/pa_IN.json",
+		"/home/web/projects/tasit/rest-api/vendor/phpunit/phpunit-mock-objects/tests/_fixture/AnInterface.php",
+		"/home/web/projects/tasit/rest-api/src/Tasit/ApiBundle/Service/MailService.php",
+		"/home/feyyazesat/.config/sublime-text-3/Packages/User/Default (Linux).sublime-keymap",
+		"/home/feyyazesat/.config/sublime-text-3/File Backups/2014-12-30/home/web/projects/tasit/rest-api/vendor/symfony/symfony/src/Symfony/Component/Validator/Constraints/Collection_150923.php",
+		"/home/feyyazesat/.config/sublime-text-3/File Backups/2014-12-30/home/web/projects/tasit/rest-api/vendor/symfony/symfony/src/Symfony/Component/Validator/Constraints/Collection_151110.php",
+		"/home/feyyazesat/.config/sublime-text-3/File Backups/2014-12-30/home/web/projects/tasit/rest-api/vendor/symfony/symfony/src/Symfony/Component/Validator/Constraints/Collection_151311.php",
+		"/home/feyyazesat/.config/sublime-text-3/File Backups/2014-12-30/home/web/projects/tasit/rest-api/vendor/symfony/symfony/src/Symfony/Component/Validator/Constraints/Collection_150657.php",
+		"/home/feyyazesat/.config/sublime-text-3/File Backups/2014-12-30/home/web/projects/tasit/rest-api/vendor/symfony/symfony/src/Symfony/Component/Validator/Constraints/Collection_150951.php",
+		"/home/feyyazesat/.config/sublime-text-3/Packages/User/Git.sublime-settings",
+		"/home/web/projects/tasit/rest-api/src/Tasit/ApiBundle/Service/VersionService.php",
+		"/home/web/projects/tasit/project/lib/tclib/file/tcFileUploaderFlash.php",
+		"/home/web/projects/tasit/rest-api/vendor/cloudinary/cloudinary_php/samples/basic/basic.php"
+	],
+	"find":
+	{
+		"height": 36.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			"/var/golang/src/",
+			"/var/golang/src/github.com/",
+			"/var/golang/src/github.com/garyburd/redigo",
+			"/var/golang/src/github.com/Shopify/go-lua",
+			"/var/golang/src/github.com/garyburd/redigo/redis",
+			"/var/golang/src/github.com/Shopify/go-lua",
+			"/var/web/www/rest-api/src",
+			"/var/web/www/rest-api",
+			"/home/web/projects/tasit/rest-api/src",
+			"/home/web/projects/tasit/rest-api",
+			"/home/web/projects/tasit/rest-api/vendor",
+			"/home/web/projects/tasit/rest-api/src",
+			"/home/web/projects/tasit/rest-api",
+			"/home/web/projects/tasit/rest-api/src",
+			"/home/web/projects/tasit/rest-api",
+			"/home/web/projects/tasit/rest-api/src",
+			"/home/web/projects/tasit/rest-api/",
+			"/home/web/projects/tasit/rest-api/src/Tasit",
+			"/home/web/projects/tasit/frontend/src/Tasit",
+			"/home/web/projects/tasit/rest-api/src/Tasit",
+			"/home/web/projects/tasit/frontend/src/Tasit",
+			"/home/web/projects/tasit/rest-api/src/Tasit",
+			"/home/web/projects/tasit/rest-api/src/",
+			"/home/web/projects/tasit/project",
+			"/home/web/projects/tasit/rest-api",
+			"/home/web/projects/tasit/project/lib",
+			"/home/web/projects/tasit/project/libs",
+			"/home/web/projects/tasit/project",
+			"/home/web/projects/tasit/rest-api/src/Tasit/",
+			"/home/web/projects/tasit/project",
+			"/home/web/libs",
+			"/home/web/projects/tasit/project",
+			"/home/web/projects/tasit/rest-api/src/Tasit/",
+			"/home/web/projects/tasit/project/, -cache/*, -log/*, -apps/business, -apps/facebook, -apps/api, -apps/subwebsites, -task/crawler, -tclib/seo",
+			"/home/web/projects/tasit/project/, -cache/*, -log/*, -apps/business, -apps/facebook, -apps/api",
+			"/home/web/projects/tasit/project/, -cache/*, -log/*",
+			"/home/web/projects/tasit/project",
+			"/home/web/projects/tasit/rest-api/src/Tasit/",
+			"/home/web/projects/tasit/rest-api/src/Tasit/ApiBundle/Controller",
+			"/home/web/projects/tasit/rest-api/, -var/*, -cache/*, -log/*",
+			"/home/web/projects/tasit/project/, -cache/*, -log/*",
+			"/home/web/projects/tasit/rest-api/, -var/*, -cache/*, -log/*",
+			"/home/web/projects/tasit/project/, -cache/*, -log/*",
+			"/home/web/projects/tasit/rest-api/, -var/*, -cache/*, -log/*",
+			"/home/web/projects/tasit/project/, -cache/*, -log/*",
+			"/home/web/projects/tasit/rest-api/, -var/*, -cache/*, -log/*",
+			"/home/web/projects/tasit/rest-api/src/Tasit/ApiBundle, -var/*, -cache/*, -log/*",
+			"/home/web/projects/tasit/project/, -cache/*, -log/*",
+			"/home/web/projects/tasit/rest-api/src/Tasit/ApiBundle, -var/*, -cache/*, -log/*",
+			"/home/web/projects/tasit/project/, -cache/*, -log/*",
+			"/home/web/projects/tasit/frontend/src/Tasit/FrontendBundle, -app/cache/*, -app/logs/*",
+			"/home/web/projects/tasit/project/, -cache/*, -log/*",
+			"/home/web/projects/tasit/frontend/src/Tasit/ProxyBundle, -app/cache/*, -app/logs/*",
+			"/home/web/projects/tasit/frontend/, -app/cache/*, -app/logs/*",
+			"/home/web/projects/frontend/, -app/cache/*, -app/logs/*",
+			"/home/web/projects/tasit/project/, -cache/*, -log/*",
+			"/home/web/projects/symfony25.local/, -app/cache/*, -app/logs/*",
+			"/home/web/projects/symfony25.local/, -app/cache/*, -app/logs/*, -app/symfony14",
+			"/home/web/projects/symfony25.local/, -app/cache/*, -app/logs/*, -app/symfony14, -vendor/*",
+			"/home/web/projects/symfony25.local/, -app/cache/*, -app/logs/*, -app/symfony14",
+			"/home/web/projects/symfony25.local/, -app/cache/*, -app/logs/*",
+			"/home/web/projects/symfony25.local/",
+			"/home/web/projects/symfony25.local/src/Tasit/Symfony1xWrapperBundle",
+			"/home/web/projects/tasit/project/,-cache/*,-log/*",
+			"/home/web/projects/tasit/project/",
+			"/home/web/projects/tasit/project/lib",
+			"/home/web/projects/tasit/project/",
+			"/home/web/projects/tasit/project/apps/frontend",
+			"/home/feyyazesat/.config/sublime-text-3/Packages",
+			"/home/feyyazesat/.config/sublime-text-3/Installed Packages",
+			"/home/feyyazesat/.config/sublime-text-3/Installed \\Packages",
+			"/home/feyyazesat/.config/sublime-text-3/Installed\\ Packages",
+			"/home/feyyazesat/.config/sublime-text-3/Packages",
+			"/home/feyyazesat/.config/sublime-text-3/Packages/SublimeCodeIntel/,*.py",
+			"/home/web/projects/tasit/project,*.php",
+			"/home/web/projects/tasit/project",
+			"/home/web/projects/ciltsitesi.local/wp-content/plugins",
+			"/home/web/projects/ciltsitesi.local/wp-content/themes/Newspaper/",
+			"/home/web/projects/tasit/project/web/wordpress",
+			"/home/web/projects/tasit/project/web/frontend",
+			"/home/web/projects/tasit/project/",
+			"/home/web/projects/tasit/project/lib",
+			"/home/web/projects/tasit/project/web",
+			"/home/web/projects/tasit/project/apps",
+			"/home/web/projects/tasit/project/",
+			"/home/web/projects/tasit/project/web/wordpress/",
+			"/home/web/projects/tasit/project",
+			"/home/web/projects/tasit/project/lib",
+			"/home/web/projects/tasit/project/",
+			"/home/web/projects/tasit/project/lib",
+			"/home/web/projects/tasit/project/",
+			"/home/web/projects/tasit/project/web/wordpress/",
+			"/home/web/projects/tasit/project/web/wordpress/wp-content/themes/tasitblog",
+			"/home/web/projects/ciltsitesi.local/wp-content/themes/Newspaper/",
+			"/home/web/projects/tasit/project/web/wordpress",
+			"/home/web/projects/tasit/project/web/",
+			"/home/web/projects/tasit/project/web/wordpress/",
+			"/home/web/projects/tasit/project",
+			"/home/web/projects/ciltsitesi.local/wp-content/themes/Newspaper/",
+			"/home/web/projects/ciltsitesi.com/wp-content/themes/Newspaper/",
+			"/home/web/projects/tasit/project/",
+			"/home/web/projects/tasit/project/web/wordpress/",
+			"/home/web/projects/tasit/project/web/wordpress/wp-content/",
+			"/home/web/projects/tasit/project/web/wordpress/wp-content/themes/tasitblog",
+			"/home/web/projects/ciltsitesi.local/",
+			"/home/web/projects/tasit/project/web/wordpress/",
+			"/home/web/projects/tasit/project/",
+			"/home/web/projects/ayseguldemirsoy.local",
+			"/home/web/projects/ayselguldemirsoy.local",
+			"/home/web/projects/tasit/project/",
+			"/home/web/projects/tasit/project/lib/form",
+			"/home/web/projects/tasit/project/lib/forms",
+			"/home/web/projects/tasit/project/",
+			"/home/web/projects/tasit/project/lib/form",
+			"/home/web/projects/tasit/project/apps/",
+			"/home/web/projects/tasit/project/web/wordpress/wp-content/themes/tasitblog/",
+			"/home/web/projects/tasit/project/",
+			"/home/web/projects/tasit/project/web/wordpress/",
+			"/home/web/projects/tasit/project/",
+			"/home/web/projects/tasit/project/apps/frontend/modules/",
+			"/home/web/projects/tasit/project/lib",
+			"/etc/nginx/sites-enabled/"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+			"func",
+			"func ",
+			"simmetrica",
+			"tstampValTuple",
+			"uint8",
+			"resolutions",
+			"RoundTime",
+			"spew",
+			"fmt.Println",
+			"Exec",
+			"os.Exec",
+			"os.exec",
+			"DEFAULT_",
+			"redisArgs",
+			"redis",
+			"hnVars",
+			"&args",
+			"configPath",
+			"config",
+			"redis",
+			"func Dial",
+			"Conn interface",
+			"init()",
+			"init",
+			"Conn interface",
+			"Conn",
+			"Yaml",
+			"Config",
+			"neuteredReaddirFile",
+			"Args",
+			"main",
+			"simmetrica",
+			"DEFAULT",
+			"LogRoutes",
+			"neuteredReaddirFile",
+			"Push",
+			"type Conn",
+			"reflect",
+			"interface",
+			"time",
+			"redis_",
+			"red,",
+			"defer",
+			"getCurrentTimeStamp",
+			"uint32",
+			"yield",
+			"time.Time",
+			"uint32",
+			"counter",
+			"er",
+			"[]interface{}{}",
+			"interface{}{}",
+			"[]interface{}{}",
+			"+               echo '",
+			"';",
+			"+",
+			"echo '",
+			"+echo '",
+			"'",
+			"DEFAULT_INCREMENT",
+			"incre",
+			"configContent",
+			"configPath",
+			"ReadParametersFile",
+			"render_template",
+			"url_",
+			"httpHandler",
+			"url_fo",
+			"static_folder",
+			"render_template",
+			"helloHttp",
+			"Server",
+			"get_config_filename",
+			"v",
+			"_panic",
+			"error",
+			"nil",
+			"parametersContent",
+			"parametersPath",
+			"Simmetrica",
+			"Params",
+			"array",
+			"RedisClients",
+			"R",
+			"conn Conn",
+			"Conn",
+			"redis",
+			"r",
+			"parameters",
+			"yaml",
+			"abc",
+			"TCPListener",
+			"parametersContent",
+			"powed",
+			"x",
+			"~",
+			"'",
+			"//	",
+			"byte",
+			"cities",
+			"getDb",
+			"data/vehicle/types",
+			"*",
+			"term",
+			"DBAL",
+			"transaction",
+			"tra",
+			"DELETE FROM",
+			"bookingCancel",
+			"bookingCancelRequestToQuery",
+			"function bookingCancel",
+			"searchFullte",
+			"offers/{keycode}",
+			"pickFirstPhotoFromResult",
+			"user_service",
+			"fade",
+			"high",
+			"write",
+			"id",
+			"clientIp\"",
+			"clientip\"",
+			"consumerKey\"",
+			"consumerKey",
+			"type\": ",
+			"path",
+			"responses",
+			"method",
+			"dataMode\": \""
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"",
+			"boş bırakılamaz!",
+			"new Assert\\NotBlank(['message' => 'Bu alan boş bırakılamaz!'])",
+			"companyNameShort",
+			"getStaticImagePath",
+			"throw new HttpException(401, \"Kullanıcı bu işlemi yapmaya yetkili değildir\");",
+			"\" : \"",
+			"\\n",
+			"getVehicleTypeSlugs()",
+			"isOfferActive",
+			"checkIsOfferExist",
+			"equipmentSlug",
+			"string $locationSlug",
+			"equipmentSlug",
+			"$ageTypeSlug",
+			"$bodyTypeSlug",
+			"ageType ",
+			"$ageType",
+			"variantSlug ",
+			"$variantSlug",
+			"variantSlug ",
+			"variantSlug",
+			"$modelSlug",
+			"$brandSlug",
+			"vehicleTypeSlug",
+			"listingTypeSlug",
+			"\\n",
+			"getResults(0, 40",
+			"$registrationYear",
+			"->setSortBy(",
+			"$this->offerPhotoService->pickFirstPhotoFromResult",
+			"->offerPhotoService->pickFirstPhotoFromResult",
+			"MAX_MATCHES_INTERNAL",
+			"SORTBY",
+			"setSortByForOffer(",
+			"SORT_BY_MEMBER_CREATED_AT",
+			"",
+			"\" :",
+			"\"",
+			",",
+			":",
+			"\"",
+			"' :",
+			",",
+			"' = ",
+			"@const ",
+			"VehicleType::BIKE",
+			"VehicleType::TRUCK",
+			"VehicleType::BIKE",
+			"OfferListingType::",
+			"VehicleType::CAR",
+			"offerListingType::LISTING_TYPE_RENT",
+			"offerListingType::LISTING_TYPE_SELL",
+			"@ApiDoc",
+			"    /**",
+			"   /**",
+			"/*",
+			"nShowcaseResults",
+			"",
+			"IDX_W",
+			"_IDX",
+			"offerFieldWeights",
+			"OFFER_INDEX_WEIGHT",
+			"OFFER_FIELD_",
+			"",
+			"$offerSearchService",
+			"`$1`.`$2` AS `$1Table__$2`",
+			"`$1`.`$2` AS `$1__$2`",
+			"$1",
+			"`member_subscription`.",
+			"`member_contact`.",
+			"`member`.",
+			"`offer_note`.",
+			"`offer_source`.",
+			"`offer_rent_period`.",
+			"`offer_listing_type`.",
+			"`offer_external_url`.",
+			"`offer_photo`.",
+			"`offer_option_choice`.",
+			"`offer_option`.",
+			"`vehicle_attribute_colortype`.",
+			"`vehicle_attribute_color`.",
+			"`vehicle_attribute_capacity`.",
+			"`vehicle_attribute_fueltype`.",
+			"`vehicle_attribute_geartype`.",
+			"`vehicle_attribute_power`.",
+			"`vehicle_attribute_agetype`.",
+			"`vehicle_attribute_bodytype`.",
+			"`vehicle_variant`.",
+			"`vehicle_model`.",
+			"`vehicle_brand`.",
+			"`vehicle_type`.",
+			"`vehicle`.",
+			"`offer`.",
+			"\\nLEFT JOIN ",
+			"`,\\n`",
+			"OfferListingType",
+			"FT_FIELD_WEIGHT",
+			"q",
+			"$q",
+			"!defined(\"$1\")",
+			"if (!defined",
+			"if (!defined($1))\\n\\tdefine ( \"$1\",$2);",
+			"if (!defined($1)) define ( \"$1\",$2);",
+			"this->s",
+			"$",
+			"this->_sphinxClient",
+			"$_sphinxClient",
+			"  { \"keys\": [\"super+period\"], \"command\" : \"navigate_to_definition\" },                                //period is mouse_click_1 overriden\n\n  { \"keys\": [ \"ctrl+alt+m\" ], \"command\": \"un_pretty_json\" }                                          //overridex",
+			"  { \"keys\": [\"ctrl+super+left\"], \"command\": \"focus_neighboring_group\", \"args\": {\"forward\": false} }, //overriden\n  { \"keys\": [\"ctrl+super+right\"], \"command\": \"focus_neighboring_group\" },                            //overriden\n  { \"keys\": [\"ctrl+k\", \"ctrl+shift+left\"], \"command\": \"move_to_neighboring_group\", \"args\": {\"forward\": false} },\n  { \"keys\": [\"ctrl+k\", \"ctrl+shift+right\"], \"command\": \"move_to_neighboring_group\" },",
+			"  { \"keys\": [\"ctrl+super+left\"], \"command\": \"focus_neighboring_group\", \"args\": {\"forward\": false} }, //overriden\n  { \"keys\": [\"ctrl+super+right\"], \"command\": \"focus_neighboring_group\" },                            //overriden\n  { \"keys\": [\"ctrl+k\", \"ctrl+shift+left\"], \"command\": \"move_to_neighboring_group\", \"args\": {\"forward\": false} },\n  { \"keys\": [\"ctrl+k\", \"ctrl+shift+right\"], \"command\": \"move_to_neighboring_group\" },\n\n  { \"keys\": [\"ctrl+<\"], \"command\": \"indent\" },                                                       //overriden\n  { \"keys\": [\"ctrl+shift+<\"], \"command\": \"unindent\" },        ",
+			" [\"ctrl+super+left\"], \"command\": \"focus_neighboring_group\", \"args\": {\"forward\": false} }, //overriden\n  { \"keys\": [\"ctrl+super+right\"], \"command\": \"focus_neighboring_group\" },                            //overriden\n  { \"keys\": [\"ctrl+k\", \"ctrl+shift+left\"], \"command\": \"move_to_neighboring_group\", \"args\": {\"forward\": false} },\n  { \"keys\": [\"ctrl+k\", \"ctrl+shift+right\"], \"command\": \"move_to_neighboring_group\" },\n\n  { \"keys\": [\"ctrl+<\"], \"command\": \"indent\" },                                                       //overriden\n  { \"keys\": [\"ctrl+shift+<\"], \"command\": \"unindent\" },                                               //overriden\n",
+			"SF14_DEV_BASE_URL",
+			"head",
+			"URL_SEP",
+			"wp",
+			"sf14P",
+			"$sf14P",
+			"Sf14",
+			"sf14",
+			"sf",
+			"sfProxy",
+			"SF14_",
+			"\"path\"",
+			"{path}",
+			"Symfony1x",
+			"symfony1x",
+			"Symfony1x"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 4,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/var/golang/src/github.com/feyyazesat/simmetrica/simmetrica.go",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6516,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								488,
+								488
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content"
+							],
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/GoSublime/syntax/GoSublime-Go.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 44.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/var/golang/src/github.com/feyyazesat/simmetrica/simmlib/simmlib.go",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4947,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1150,
+								1150
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content"
+							],
+							"gist":
+							{
+								"comments": 0,
+								"comments_url": "https://api.github.com/gists/dfcab07a20fae04bb38b/comments",
+								"commits_url": "https://api.github.com/gists/dfcab07a20fae04bb38b/commits",
+								"created_at": "2015-03-05T18:01:18Z",
+								"description": "simmlib.go",
+								"files":
+								{
+									"simmlib.go":
+									{
+										"content": "package simmlib\n\nimport (\n	\"fmt\"\n	\"os\"\n	\"time\"\n\n	redisLib \"github.com/garyburd/redigo/redis\"\n)\n\n// Default values\nconst (\n	DEFAULT_INCREMENT      = uint64(1)\n	DEFAULT_RESOLUTION     = \"5min\"\n	DEFAULT_REDIS_HOST     = \"localhost\"\n	DEFAULT_REDIS_PORT     = uint16(6379)\n	DEFAULT_REDIS_DB       = 0\n	DEFAULT_REDIS_PASSWORD = \"\"\n)\n\n// time slices for graph\n// !private\nvar resolutions = map[string]uint64{\n	\"min\":   60,\n	\"5min\":  300,\n	\"15min\": 900,\n	\"hour\":  3600,\n	\"day\":   86400,\n	\"week\":  86400 * 7,\n	\"month\": 86400 * 30,\n	\"year\":  86400 * 365,\n}\n\ntype TimeResolution struct {\n	resolution string\n	timestamp  uint64\n}\n\nfunc Check(err error) {\n	if err != nil {\n		panic(err)\n		os.Exit(1)\n	}\n}\n\nfunc Init(redisHost string, redisPort string) (redisConnection redisLib.Conn) {\n\n	return redisConnection\n}\nfunc Push(redisConnection redisLib.Conn, event string, increment uint64, now uint64) interface{} {\n	var key string\n	//	var timeResolution TimeResolution\n	//	var timeRes = make(chan TimeResolution)\n	for timeRes := range getTimeStampsForPush(now) {\n		fmt.Println(timeRes)\n\n		key = getEventKey(event, timeRes.resolution)\n		_ = key\n		//		timeResolution = <-timeRes\n		//		redisConnection.Send(\"INCR\", key, timeRes.timestamp, increment)\n	}\n	//	reply, err := redisConnection.Do(\"EXEC\")\n	//	Check(err)\n	//	return reply\n	return \"\"\n}\n\n// RoundTime rounds given time according to given resolution which defined in resolutions hash map\nfunc RoundTime(time uint64, resolution uint64) uint64 {\n	return uint64(time - (time % resolution))\n}\n\n// getEventKey returns the event key according to given event name and resolution key\n// !private\nfunc getEventKey(event string, resolutionKey string) string {\n	return fmt.Sprintf(\"simmetrica:%s:%s\", event, resolutionKey)\n}\n\n// getTimeStampsForPush yields timestamps for each resolution which defined in resolutions hash map\n// !private\nfunc getTimeStampsForPush(now uint64) chan TimeResolution {\n	if now == 0 {\n		now = GetCurrentTimeStamp()\n	}\n	timeResolution := make(chan TimeResolution)\n	go func() {\n		for resolution, timestamp := range resolutions {\n			timeResolution <- TimeResolution{resolution: resolution, timestamp: RoundTime(now, timestamp)}\n		}\n	}()\n\n	return timeResolution\n}\n\n// GetCurrentTimeStamp returns current timestamp as type uint64\n// !private\nfunc GetCurrentTimeStamp() uint64 {\n	return uint64(time.Now().Unix())\n}\n",
+										"filename": "simmlib.go",
+										"language": "Go",
+										"raw_url": "https://gist.githubusercontent.com/feyyazesat/dfcab07a20fae04bb38b/raw/27daa65b70ec25a9d4dc0b7557aaa84e0eb66507/simmlib.go",
+										"size": 2360,
+										"truncated": false,
+										"type": "text/plain"
+									}
+								},
+								"forks":
+								[
+								],
+								"forks_url": "https://api.github.com/gists/dfcab07a20fae04bb38b/forks",
+								"git_pull_url": "https://gist.github.com/dfcab07a20fae04bb38b.git",
+								"git_push_url": "https://gist.github.com/dfcab07a20fae04bb38b.git",
+								"history":
+								[
+									{
+										"change_status":
+										{
+											"additions": 99,
+											"deletions": 0,
+											"total": 99
+										},
+										"committed_at": "2015-03-05T18:01:18Z",
+										"url": "https://api.github.com/gists/dfcab07a20fae04bb38b/86dfeeb7fcfe54cc241ddbbf98211bb0420658fe",
+										"user":
+										{
+											"avatar_url": "https://avatars.githubusercontent.com/u/1338800?v=3",
+											"events_url": "https://api.github.com/users/feyyazesat/events{/privacy}",
+											"followers_url": "https://api.github.com/users/feyyazesat/followers",
+											"following_url": "https://api.github.com/users/feyyazesat/following{/other_user}",
+											"gists_url": "https://api.github.com/users/feyyazesat/gists{/gist_id}",
+											"gravatar_id": "",
+											"html_url": "https://github.com/feyyazesat",
+											"id": 1338800,
+											"login": "feyyazesat",
+											"organizations_url": "https://api.github.com/users/feyyazesat/orgs",
+											"received_events_url": "https://api.github.com/users/feyyazesat/received_events",
+											"repos_url": "https://api.github.com/users/feyyazesat/repos",
+											"site_admin": false,
+											"starred_url": "https://api.github.com/users/feyyazesat/starred{/owner}{/repo}",
+											"subscriptions_url": "https://api.github.com/users/feyyazesat/subscriptions",
+											"type": "User",
+											"url": "https://api.github.com/users/feyyazesat"
+										},
+										"version": "86dfeeb7fcfe54cc241ddbbf98211bb0420658fe"
+									}
+								],
+								"html_url": "https://gist.github.com/dfcab07a20fae04bb38b",
+								"id": "dfcab07a20fae04bb38b",
+								"owner":
+								{
+									"avatar_url": "https://avatars.githubusercontent.com/u/1338800?v=3",
+									"events_url": "https://api.github.com/users/feyyazesat/events{/privacy}",
+									"followers_url": "https://api.github.com/users/feyyazesat/followers",
+									"following_url": "https://api.github.com/users/feyyazesat/following{/other_user}",
+									"gists_url": "https://api.github.com/users/feyyazesat/gists{/gist_id}",
+									"gravatar_id": "",
+									"html_url": "https://github.com/feyyazesat",
+									"id": 1338800,
+									"login": "feyyazesat",
+									"organizations_url": "https://api.github.com/users/feyyazesat/orgs",
+									"received_events_url": "https://api.github.com/users/feyyazesat/received_events",
+									"repos_url": "https://api.github.com/users/feyyazesat/repos",
+									"site_admin": false,
+									"starred_url": "https://api.github.com/users/feyyazesat/starred{/owner}{/repo}",
+									"subscriptions_url": "https://api.github.com/users/feyyazesat/subscriptions",
+									"type": "User",
+									"url": "https://api.github.com/users/feyyazesat"
+								},
+								"public": false,
+								"updated_at": "2015-03-05T18:01:18Z",
+								"url": "https://api.github.com/gists/dfcab07a20fae04bb38b",
+								"user": null
+							},
+							"incomplete_sync": null,
+							"syntax": "Packages/GoSublime/syntax/GoSublime-Go.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 360.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/var/golang/src/github.com/feyyazesat/simmetrica/simmlib/simmlib_test.go",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 580,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								580,
+								580
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content"
+							],
+							"incomplete_sync": null,
+							"open_with_edit": true,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/GoSublime/syntax/GoSublime-Go.tmLanguage",
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/var/golang/src/github.com/feyyazesat/test/test.go",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 707,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								364,
+								364
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content"
+							],
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/GoSublime/syntax/GoSublime-Go.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "/var/golang/src/github.com/garyburd/redigo/redis/conn_test.go",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 11242,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								893,
+								893
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content"
+							],
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/GoSublime/syntax/GoSublime-Go.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 225.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "/usr/local/go/src/fmt/print.go",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 30347,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2075,
+								2075
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content"
+							],
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/GoSublime/syntax/GoSublime-Go.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 428.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "/usr/local/go/src/fmt/doc.go",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 12270,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								12266,
+								12266
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content"
+							],
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/GoSublime/syntax/GoSublime-Go.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 3997.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 7,
+					"file": "/var/golang/src/github.com/feyyazesat/simmetrica/simmetrica-app.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4581,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3679,
+								3679
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content"
+							],
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1575.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "/var/golang/src/github.com/feyyazesat/simmetrica/config/config.yml",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1589,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1314,
+								1314
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content"
+							],
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/YAML/YAML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 180.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "/var/golang/src/github.com/feyyazesat/simmetrica/simmetrica.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2246,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1542,
+								1542
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content"
+							],
+							"incomplete_sync": null,
+							"open_with_edit": true,
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 472.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 36.0
+	},
+	"input":
+	{
+		"height": 33.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			0.671944476994,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.9o:///var/golang/src/github.com/feyyazesat/hello":
+	{
+		"height": 108.0
+	},
+	"output.9o:///var/golang/src/github.com/feyyazesat/polling":
+	{
+		"height": 108.0
+	},
+	"output.9o:///var/golang/src/github.com/feyyazesat/rest-api":
+	{
+		"height": 180.0
+	},
+	"output.9o:///var/golang/src/github.com/feyyazesat/simmetrica":
+	{
+		"height": 108.0
+	},
+	"output.9o:///var/golang/src/github.com/feyyazesat/simmetrica/simmlib":
+	{
+		"height": 102.0
+	},
+	"output.9o:///var/golang/src/github.com/feyyazesat/stringutil":
+	{
+		"height": 108.0
+	},
+	"output.9o:///var/golang/src/github.com/feyyazesat/test":
+	{
+		"height": 178.0
+	},
+	"output.9o:///var/golang/src/github.com/jmhodges/jsonpp":
+	{
+		"height": 67.0
+	},
+	"output.9o:///var/golang/src/gopkg.in/yaml.v2":
+	{
+		"height": 108.0
+	},
+	"output.GoSublime-output":
+	{
+		"height": 386.0
+	},
+	"output.GsComplete.completion-hint-output":
+	{
+		"height": 123.0
+	},
+	"output.GsDoc-output-output":
+	{
+		"height": 114.0
+	},
+	"output.MarGo-output":
+	{
+		"height": 114.0
+	},
+	"output.exec":
+	{
+		"height": 293.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.git":
+	{
+		"height": 205.0
+	},
+	"output.sftp":
+	{
+		"height": 0.0
+	},
+	"output.variable_get":
+	{
+		"height": 265.0
+	},
+	"output.xdebug":
+	{
+		"height": 210.0
+	},
+	"project": "golang.sublime-project",
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"sphin",
+				"src/Tasit/ApiBundle/Search/Adapter/SphinxAdapter.php"
+			],
+			[
+				"rentalserv",
+				"src/Tasit/ApiBundle/Service/RentalService.php"
+			],
+			[
+				"rentbookingcancelrequest",
+				"src/Tasit/ApiBundle/Model/RentBookingCancelRequest.php"
+			],
+			[
+				"rentalser",
+				"src/Tasit/ApiBundle/Service/RentalService.php"
+			],
+			[
+				"rentalcon",
+				"src/Tasit/ApiBundle/Controller/RentalController.php"
+			],
+			[
+				"accesstokenaut",
+				"src/Tasit/ApiBundle/Security/AccessTokenAuthenticator.php"
+			],
+			[
+				"driverlicence",
+				"src/Tasit/ApiBundle/Service/DriverLicencePlateService.php"
+			],
+			[
+				"driverlicen",
+				"src/Tasit/ApiBundle/Entity/DriverLicencePlate.php"
+			],
+			[
+				"mailservic",
+				"src/Tasit/ApiBundle/Service/MailService.php"
+			],
+			[
+				"sphinx",
+				"src/Tasit/ApiBundle/Search/Adapter/SphinxAdapter.php"
+			],
+			[
+				"usercon",
+				"src/Tasit/ApiBundle/Controller/UserController.php"
+			],
+			[
+				"memberfollow",
+				"src/Tasit/ApiBundle/Service/MemberFollowService.php"
+			],
+			[
+				"usercontro",
+				"src/Tasit/ApiBundle/Controller/UserController.php"
+			],
+			[
+				"parameters.",
+				"app/config/parameters.yml"
+			],
+			[
+				"carparkser",
+				"src/Tasit/ApiBundle/Service/CarParkService.php"
+			],
+			[
+				"carpark",
+				"src/Tasit/ApiBundle/Controller/CarParkController.php"
+			],
+			[
+				"homepa",
+				"src/Tasit/ApiBundle/Controller/HomepageController.php"
+			],
+			[
+				"rest-api/service.yml",
+				"rest-api/src/Tasit/ApiBundle/Resources/config/services.yml"
+			],
+			[
+				"search",
+				"config/search_sphinx.yml"
+			],
+			[
+				"inc_image",
+				"config/inc_image_sizes.php"
+			],
+			[
+				"frontend/homepage/actions",
+				"project/apps/frontend/modules/homepage/actions/actions.class.php"
+			],
+			[
+				"homepage/actions/actions.",
+				"project/apps/backend/modules/homepage/actions/actions.class.php"
+			],
+			[
+				"rest-apiofferinsurancetype",
+				"rest-api/src/Tasit/ApiBundle/Entity/OfferInsuranceType.php"
+			],
+			[
+				"project/config/inc_da",
+				"project/config/inc_databases.php"
+			],
+			[
+				"src/tasit/apibundle/entity/group.php",
+				"rest-api/src/Tasit/ApiBundle/Entity/Group.php"
+			],
+			[
+				"memberservice",
+				"rest-api/src/Tasit/ApiBundle/Service/MemberService.php"
+			],
+			[
+				"testcontroller",
+				"rest-api/src/Tasit/ApiBundle/Controller/TestController.php"
+			],
+			[
+				"groupre",
+				"rest-api/src/Tasit/ApiBundle/Repository/GroupRepository.php"
+			],
+			[
+				"sphinx.yml",
+				"config/search_sphinx.yml"
+			],
+			[
+				"sphinxapi",
+				"lib/tclib/search/sphinxapi.php"
+			],
+			[
+				"project/frontend/modules/offer_search/",
+				"project/apps/frontend/modules/offer_search/actions/actions.class.php"
+			],
+			[
+				"rest-api/offerlisting",
+				"rest-api/src/Tasit/ApiBundle/Repository/OfferListingTypeRepository.php"
+			],
+			[
+				"offerlistin",
+				"lib/model/doctrine/OfferListingType.class.php"
+			],
+			[
+				"service.yml",
+				"rest-api/src/Tasit/ApiBundle/Resources/config/services.yml"
+			],
+			[
+				"composer",
+				"rest-api/composer.json"
+			],
+			[
+				"/apps/frontend/modules/content/actions/actions.class.php",
+				"project/apps/frontend/modules/content/actions/actions.class.php"
+			],
+			[
+				"apps/frontend/component.class.php",
+				"project/apps/frontend/modules/offer/actions/components.class.php"
+			],
+			[
+				"layout",
+				"project/apps/frontend/templates/layout.php"
+			],
+			[
+				"add_hierar",
+				"project/data/sql/add_hierarchical_group_member_for_master_business.sql"
+			],
+			[
+				"add_hie",
+				"project/data/sql/add_hierarchical_group_member_for_co_business.sql"
+			],
+			[
+				"locationtable",
+				"project/lib/model/doctrine/LocationTable.class.php"
+			],
+			[
+				"sigortayeri",
+				"project/lib/form/frontend/FrontendSigortayeriMemberPrivateForm.class.php"
+			],
+			[
+				"add_hiearar",
+				"project/data/sql/add_hierarchical_group_member_for_co_business.sql"
+			],
+			[
+				"tcutil",
+				"project/lib/tclib/util/tcUtil.php"
+			],
+			[
+				".scss",
+				"project/web/static/sass/screen.scss"
+			],
+			[
+				"header.scss",
+				"project/web/static/sass/layout/_header.scss"
+			],
+			[
+				"global.js",
+				"project/web/business/js/global.js"
+			],
+			[
+				"tcsecurity",
+				"project/lib/tclib/user/tcSecurityUser.class.php"
+			],
+			[
+				"offer",
+				"project/lib/model/doctrine/Offer.class.php"
+			],
+			[
+				"td_menu_back.php",
+				"ciltsitesi.local/wp-content/themes/Newspaper/includes/wp_booster/td_menu_back.php"
+			],
+			[
+				"newspaper/style.css",
+				"ciltsitesi.local/wp-content/themes/Newspaper/style.css"
+			],
+			[
+				"inc/routing.class.php",
+				"project/web/wordpress/wp-content/themes/tasitblog/inc/Tasitblog_Routing.class.php"
+			],
+			[
+				"routing.class",
+				"ciltsitesi.local/wp-content/themes/Newspaper/inc/Routing.class.php"
+			],
+			[
+				"wprouting",
+				"ciltsitesi.local/wp-content/themes/Newspaper/inc/Routing.class.php"
+			],
+			[
+				"web/frontend/index.php",
+				"project/web/frontend/index.php"
+			],
+			[
+				"sidebar-header.php",
+				"project/web/wordpress/wp-content/themes/tasitblog/sidebar-header.php"
+			],
+			[
+				"tasitblog/functions",
+				"project/web/wordpress/wp-content/themes/tasitblog/functions.php"
+			],
+			[
+				"tasitblog/header",
+				"project/web/wordpress/wp-content/themes/tasitblog/sidebar-header.php"
+			],
+			[
+				"tasitblog/header.php",
+				"project/web/wordpress/wp-content/themes/tasitblog/header.php"
+			],
+			[
+				"tcsecurityuser",
+				"project/lib/tclib/user/tcSecurityUser.class.php"
+			],
+			[
+				"wp-content/plugins/most",
+				"project/web/wordpress/wp-content/plugins/most-popular-tags/mostpopulartags.php"
+			],
+			[
+				"wp-config.php",
+				"ciltsitesi.local/wp-config.php"
+			],
+			[
+				"popgallery",
+				"project/web/wordpress/wp-content/themes/tasitblog/popgallery-widget.php"
+			],
+			[
+				"web/wordpress/wp-content/themes/tasitblog/widget",
+				"project/web/wordpress/wp-content/themes/tasitblog/poppost-widget.php"
+			],
+			[
+				"remove_hiear",
+				"project/data/sql/remove_hierarchical_group_member_for_master_business.sql"
+			],
+			[
+				"remove_h",
+				"project/data/sql/remove_hierarchical_group_member_for_co_business.sql"
+			],
+			[
+				"add_hi",
+				"project/data/sql/add_hierarchical_group_member_for_co_business.sql"
+			],
+			[
+				"my_account/actions",
+				"project/apps/frontend/modules/my_account/actions/actions.class.php"
+			],
+			[
+				"my_vehicle/actions",
+				"project/apps/frontend/modules/my_vehicle/actions/actions.class.php"
+			],
+			[
+				"my_vehicle/index",
+				"project/apps/frontend/modules/my_vehicle/templates/indexSuccess.php"
+			],
+			[
+				"tcsecurit",
+				"project/lib/tclib/user/tcSecurityUser.class.php"
+			],
+			[
+				"tctext",
+				"project/lib/tclib/util/tcTextUtil.php"
+			],
+			[
+				"member.class.php",
+				"project/lib/model/doctrine/Member.class.php"
+			],
+			[
+				"membertable",
+				"project/lib/model/doctrine/MemberTable.class.php"
+			],
+			[
+				"my_account/actions/act",
+				"project/apps/frontend/modules/my_account/actions/actions.class.php"
+			],
+			[
+				"frontend/config/routin",
+				"project/apps/frontend/config/routing.yml"
+			],
+			[
+				"left_menu",
+				"project/apps/frontend/modules/my_home/templates/_left_menu.php"
+			],
+			[
+				"my_page/actions",
+				"project/apps/frontend/modules/my_page/actions/actions.class.php"
+			],
+			[
+				"mypage",
+				"project/test/functional/frontend/my_pageActionsTest.php"
+			],
+			[
+				"sfguardgrouptable",
+				"project/lib/model/doctrine/sfDoctrineGuardPlugin/sfGuardGroupTable.class.php"
+			],
+			[
+				"signinsuccess.php",
+				"project/apps/frontend/modules/my_account/templates/signinSuccess.php"
+			],
+			[
+				"signinsuccess",
+				"project/plugins/sfDoctrineGuardPlugin/modules/sfGuardAuth/templates/signinSuccess.php"
+			],
+			[
+				"sfguardformsignin",
+				"project/plugins/sfDoctrineGuardPlugin/lib/form/sfGuardFormSignin.class.php"
+			],
+			[
+				"sigortayeriinmyhomewarning",
+				"project/apps/frontend/modules/partnership_campaign/templates/sigortaYeriInMyHomeWarningSuccess.php"
+			],
+			[
+				"partnershipcampaigns/actions",
+				"project/apps/frontend/modules/partnership_campaign/actions/actions.class.php"
+			],
+			[
+				"my_account/actions/",
+				"project/apps/frontend/modules/my_account/actions/actions.class.php"
+			],
+			[
+				"skeletonscss",
+				"project/web/static/sass/layout/_skeleton.scss"
+			],
+			[
+				"wp-config",
+				"project/web/wordpress/wp-config.php"
+			],
+			[
+				"/wp-content/themes/freestyle/404.php",
+				"ayselguldemirsoy.local/wp-content/themes/freestyle/404.php"
+			],
+			[
+				"ayseguldemirsoy.local/404",
+				"ayselguldemirsoy.local/wp-content/themes/freestyle/404.php"
+			],
+			[
+				"user-home",
+				"project/web/static/sass/layout/_user-home.scss"
+			],
+			[
+				"web/wordpress/wp-content/plugins/google-sitemap-generator/sitemap.php",
+				"project/web/wordpress/wp-content/plugins/google-sitemap-generator/sitemap.php"
+			],
+			[
+				"wp-conig",
+				"project/web/wordpress/wp-config.php"
+			],
+			[
+				"insurance",
+				"project/web/static/sass/layout/_insurance.scss"
+			],
+			[
+				"_left",
+				"project/apps/frontend/modules/my_home/templates/_left_menu.php"
+			],
+			[
+				"lib/form/frontend/frontendsigortayerimemberprivateform.class.php",
+				"project/lib/form/frontend/FrontendSigortayeriMemberPrivateForm.class.php"
+			],
+			[
+				"project/apps/frontend/modules/homepage/actions/actions.cla",
+				"project/apps/frontend/modules/homepage/actions/actions.class.php"
+			],
+			[
+				"project/lib/tclib/util/tcutil.php",
+				"project/lib/tclib/util/tcUtil.php"
+			],
+			[
+				"lib/model/doctrine/base/basedriverlicenceplate.class.php",
+				"project/lib/model/doctrine/base/BaseDriverLicencePlate.class.php"
+			],
+			[
+				"memberbalance.class.",
+				"project/lib/model/doctrine/MemberBalance.class.php"
+			],
+			[
+				"insurance.scss",
+				"project/web/static/sass/layout/_insurance.scss"
+			],
+			[
+				"imageuploadtemporaryform",
+				"project/lib/form/doctrine/ImageUploadTemporaryForm.class.php"
+			],
+			[
+				"textbox.cs",
+				"project/web/static/sass/modules/_textbox.scss"
+			],
+			[
+				"textbox.scss",
+				"project/web/static/sass/modules/_textbox.scss"
+			],
+			[
+				"driver",
+				"project/lib/form/doctrine/DriverLicencePlateForm.class.php"
+			],
+			[
+				"global",
+				"widget/web/js/global.js"
+			],
+			[
+				"_user-home.scss",
+				"project/web/static/sass/layout/_user-home.scss"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"~/.config/sublime-text-3/Projects/rest-api.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+		"xdebug":
+		{
+			"hide_conflict": false
+		}
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 282.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

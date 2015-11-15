@@ -1,0 +1,14 @@
+{
+    // you may set specific environment variables here
+    // e.g "env": { "PATH": "$HOME/go/bin:$PATH" }
+    // in values, $PATH and ${PATH} are replaced with
+    // the corresponding environment(PATH) variable, if it exists.
+    "env": {"GOPATH": "/var/golang", "GOROOT": "/usr/local/go"},
+    "shell": ["/bin/zsh"],
+    // by default fmt'ing is done by margo using `fmt_tab_intent` and `fmt_tab_width` (above)
+    // you may use a command of your choosing by setting `fmt_cmd`
+    // e.g. ["goimports"]
+    // the command will be passed, to its stdin, the contents of the file
+    // it must output the new file contents
+    "fmt_cmd": ["goimports"]
+}

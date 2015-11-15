@@ -6,61 +6,73 @@ import sublime
 import sublime_plugin
 import subprocess
 import time
-import csv
+import sys
 from os.path import dirname, realpath
 
-def dofmt(eself, eview, sgter = None):
+dist_dir = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, dist_dir)
+if int(sublime.version()) >= 3000:
+    from diff_match_patch.python3.diff_match_patch import diff_match_patch
+else:
+    from diff_match_patch.python2.diff_match_patch import diff_match_patch
+
+def getSetting( view, settings, key, default ):
+    local = 'phpfmt.' + key
+    return view.settings().get( local, settings.get( key, default ) )
+
+def dofmt(eself, eview, sgter = None, src = None, force = False):
     self = eself
     view = eview
     s = sublime.load_settings('phpfmt.sublime-settings')
-    debug = s.get("debug", False)
-    psr = s.get("psr1_and_2", False)
-    psr1 = s.get("psr1", False)
-    psr1_naming = s.get("psr1_naming", psr1)
-    psr2 = s.get("psr2", False)
-    indent_with_space = s.get("indent_with_space", False)
-    enable_auto_align = s.get("enable_auto_align", False)
-    visibility_order = s.get("visibility_order", False)
-    autoimport = s.get("autoimport", True)
-    short_array = s.get("short_array", False)
-    merge_else_if = s.get("merge_else_if", False)
-    smart_linebreak_after_curly = s.get("smart_linebreak_after_curly", True)
-    yoda = s.get("yoda", False)
-    autopreincrement = s.get("autopreincrement", False)
-    remove_leading_slash = s.get("remove_leading_slash", False)
-    linebreak_after_namespace = s.get("linebreak_after_namespace", False)
-    linebreak_between_methods = s.get("linebreak_between_methods", False)
-    remove_return_empty = s.get("remove_return_empty", False)
-    add_missing_parentheses = s.get("add_missing_parentheses", False)
-    wrong_constructor_name = s.get("wrong_constructor_name", False)
-    join_to_implode = s.get("join_to_implode", False)
-    encapsulate_namespaces = s.get("encapsulate_namespaces", False)
-    ignore_list = s.get("ignore_list", "")
-    laravel_style = s.get("laravel_style", False)
-    cakephp_style = s.get("cakephp_style", False)
-    strip_extra_comma_in_array = s.get("strip_extra_comma_in_array", False)
 
-    php_bin = s.get("php_bin", "php")
+
+    additional_extensions = getSetting( view, s, "additional_extensions", [])
+    autoimport = getSetting( view, s, "autoimport", True)
+    debug = getSetting( view, s, "debug", False)
+    enable_auto_align = getSetting( view, s, "enable_auto_align", False)
+    ignore_list = getSetting( view, s, "ignore_list", "")
+    indent_with_space = getSetting( view, s, "indent_with_space", False)
+    psr1 = getSetting( view, s, "psr1", False)
+    psr1_naming = getSetting( view, s, "psr1_naming", psr1)
+    psr2 = getSetting( view, s, "psr2", False)
+    smart_linebreak_after_curly = getSetting( view, s, "smart_linebreak_after_curly", True)
+    skip_if_ini_missing = getSetting( view, s, "skip_if_ini_missing", False)
+    visibility_order = getSetting( view, s, "visibility_order", False)
+    yoda = getSetting( view, s, "yoda", False)
+    readini = getSetting( view, s, "readini", False)
+    php55compat = getSetting( view, s, "php55compat", False)
+
+    passes = getSetting( view, s, "passes", [])
+    excludes = getSetting( view, s, "excludes", [])
+
+    php_bin = getSetting( view, s, "php_bin", "php")
     formatter_path = os.path.join(dirname(realpath(sublime.packages_path())), "Packages", "phpfmt", "fmt.phar")
+    if php55compat is True:
+        formatter_path = os.path.join(dirname(realpath(sublime.packages_path())), "Packages", "phpfmt", "fmt.8.9.0.phar")
+
     config_file = os.path.join(dirname(realpath(sublime.packages_path())), "Packages", "phpfmt", "php.tools.ini")
 
-    uri = view.file_name()
-    dirnm, sfn = os.path.split(uri)
-    ext = os.path.splitext(uri)[1][1:]
+    dirnm = ""
+    uri = ""
+    if force is False:
+        uri = view.file_name()
+        dirnm, sfn = os.path.split(uri)
+        ext = os.path.splitext(uri)[1][1:]
 
-    if "php" != ext:
-        if debug:
-            print("phpfmt: not a PHP file")
-        return False
+        if "php" != ext and not ext in additional_extensions:
+            if debug:
+                print("phpfmt: not a PHP file")
+            return False
 
     if "" != ignore_list:
-        ignore_list = ignore_list.split(" ")
+        if type(ignore_list) is not list:
+            ignore_list = ignore_list.split(" ")
         for v in ignore_list:
             pos = uri.find(v)
-            if -1 != pos:
+            if -1 != pos and v != "":
                 if debug:
                     print("phpfmt: skipping file")
-                return False;
+                return False
 
     if not os.path.isfile(php_bin) and not php_bin == "php":
         print("Can't find PHP binary file at "+php_bin)
@@ -68,59 +80,103 @@ def dofmt(eself, eview, sgter = None):
             sublime.error_message("Can't find PHP binary file at "+php_bin)
 
     # Look for oracle.sqlite
-    oracleDirNm = dirnm
-    while oracleDirNm != "/":
-        oracleFname = oracleDirNm+os.path.sep+"oracle.sqlite"
-        if os.path.isfile(oracleFname):
-            break
-        origOracleDirNm = oracleDirNm
-        oracleDirNm = os.path.dirname(oracleDirNm)
-        if origOracleDirNm == oracleDirNm:
-            break
+    if dirnm != "":
+        oracleDirNm = dirnm
+        while oracleDirNm != "/":
+            oracleFname = oracleDirNm+os.path.sep+"oracle.sqlite"
+            if os.path.isfile(oracleFname):
+                break
+            origOracleDirNm = oracleDirNm
+            oracleDirNm = os.path.dirname(oracleDirNm)
+            if origOracleDirNm == oracleDirNm:
+                break
 
-    if not os.path.isfile(oracleFname):
-        if debug:
-            print("phpfmt (oracle file): not found")
-        oracleFname = None
-    else:
-        if debug:
-            print("phpfmt (oracle file): "+oracleFname)
-
-    if debug:
-        print("phpfmt:", uri)
-        cmd_ver = [php_bin,"-v"];
-        if os.name == 'nt':
-            startupinfo = subprocess.STARTUPINFO()
-            startupinfo.dwFlags |= subprocess.STARTF_USESHOWWINDOW
-            p = subprocess.Popen(cmd_ver, stdout=subprocess.PIPE, stderr=subprocess.PIPE, cwd=dirnm, shell=False, startupinfo=startupinfo)
+        if not os.path.isfile(oracleFname):
+            if debug:
+                print("phpfmt (oracle file): not found")
+            oracleFname = None
         else:
-            p = subprocess.Popen(cmd_ver, stdout=subprocess.PIPE, stderr=subprocess.PIPE, cwd=dirnm, shell=False)
-        res, err = p.communicate()
-        print("phpfmt (php version) out:\n", res.decode('utf-8'))
-        print("phpfmt (php version) err:\n", err.decode('utf-8'))
+            if debug:
+                print("phpfmt (oracle file): "+oracleFname)
 
-    cmd_lint = [php_bin,"-ddisplay_errors=1","-l",uri];
+        if readini:
+            iniDirNm = dirnm
+            while iniDirNm != "/":
+                iniFname = iniDirNm+os.path.sep+".php.tools.ini"
+                if os.path.isfile(iniFname):
+                    break
+                originiDirNm = iniDirNm
+                iniDirNm = os.path.dirname(iniDirNm)
+                if originiDirNm == iniDirNm:
+                    break
+
+            if os.path.isfile(iniFname):
+                if debug:
+                    print("phpfmt (ini file): "+iniFname)
+                config_file = iniFname
+            elif skip_if_ini_missing:
+                if debug:
+                    print("phpfmt (ini file): not found - skipping")
+                return False
+    else:
+        oracleFname = None
+
+    cmd_ver = [php_bin, '-v'];
     if os.name == 'nt':
         startupinfo = subprocess.STARTUPINFO()
         startupinfo.dwFlags |= subprocess.STARTF_USESHOWWINDOW
-        p = subprocess.Popen(cmd_lint, stdout=subprocess.PIPE, stderr=subprocess.PIPE, cwd=dirnm, shell=False, startupinfo=startupinfo)
+        p = subprocess.Popen(cmd_ver, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=False, startupinfo=startupinfo)
     else:
-        p = subprocess.Popen(cmd_lint, stdout=subprocess.PIPE, stderr=subprocess.PIPE, cwd=dirnm, shell=False)
-    lint_out, lint_err = p.communicate()
+        p = subprocess.Popen(cmd_ver, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=False)
+    res, err = p.communicate()
+    print("phpfmt (php_ver) cmd:\n", cmd_ver)
+    print("phpfmt (php_ver) out:\n", res.decode('utf-8'))
+    print("phpfmt (php_ver) err:\n", err.decode('utf-8'))
+    if php55compat is False and ('PHP 5.3' in res.decode('utf-8') or 'PHP 5.3' in err.decode('utf-8') or 'PHP 5.4' in res.decode('utf-8') or 'PHP 5.4' in err.decode('utf-8') or 'PHP 5.5' in res.decode('utf-8') or 'PHP 5.5' in err.decode('utf-8')):
+        s = debugEnvironment(php_bin, formatter_path)
+        sublime.message_dialog('Warning.\nPHP 5.6 or newer is required.\nPlease, upgrade your local PHP installation.\nDebug information:'+s)
+        return False
 
-    if(p.returncode==0):
+    if debug:
+        s = debugEnvironment(php_bin, formatter_path)
+        print(s)
+
+    lintret = 1
+    if "AutoSemicolon" in passes:
+        lintret = 0
+    else:
+        cmd_lint = [php_bin,"-ddisplay_errors=1","-l"];
+        if src is None:
+            cmd_lint.append(uri)
+            if os.name == 'nt':
+                startupinfo = subprocess.STARTUPINFO()
+                startupinfo.dwFlags |= subprocess.STARTF_USESHOWWINDOW
+                p = subprocess.Popen(cmd_lint, stdout=subprocess.PIPE, stderr=subprocess.PIPE, cwd=dirnm, shell=False, startupinfo=startupinfo)
+            else:
+                p = subprocess.Popen(cmd_lint, stdout=subprocess.PIPE, stderr=subprocess.PIPE, cwd=dirnm, shell=False)
+        else:
+            if os.name == 'nt':
+                startupinfo = subprocess.STARTUPINFO()
+                startupinfo.dwFlags |= subprocess.STARTF_USESHOWWINDOW
+                p = subprocess.Popen(cmd_lint, stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=False, startupinfo=startupinfo)
+            else:
+                p = subprocess.Popen(cmd_lint, stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=False)
+            p.stdin.write(src.encode('utf-8'))
+
+        lint_out, lint_err = p.communicate()
+        lintret = p.returncode
+
+    if(lintret==0):
         cmd_fmt = [php_bin]
 
         if not debug:
             cmd_fmt.append("-ddisplay_errors=stderr")
 
+        if psr1:
+            cmd_fmt.append("-dshort_open_tag=On")
+
         cmd_fmt.append(formatter_path)
         cmd_fmt.append("--config="+config_file)
-
-        if psr:
-            psr1 = True
-            psr1_naming = True
-            psr2 = True
 
         if psr1:
             cmd_fmt.append("--psr1")
@@ -148,12 +204,6 @@ def dofmt(eself, eview, sgter = None):
         if yoda:
             cmd_fmt.append("--yoda")
 
-        if laravel_style:
-            cmd_fmt.append("--laravel")
-
-        if cakephp_style:
-            cmd_fmt.append("--cakephp")
-
         if sgter is not None:
             cmd_fmt.append("--setters_and_getters="+sgter)
             cmd_fmt.append("--constructor="+sgter)
@@ -161,70 +211,57 @@ def dofmt(eself, eview, sgter = None):
         if autoimport is True and oracleFname is not None:
             cmd_fmt.append("--oracleDB="+oracleFname)
 
+        if len(passes) > 0:
+            cmd_fmt.append("--passes="+','.join(passes))
 
-        extras = []
-        if short_array:
-            extras.append("ShortArray")
+        if len(excludes) > 0:
+            cmd_fmt.append("--exclude="+','.join(excludes))
 
-        if merge_else_if:
-            extras.append("MergeElseIf")
+        if debug:
+            cmd_fmt.append("-v")
 
-        if autopreincrement:
-            extras.append("AutoPreincrement")
+        if sgter is None:
+            cmd_fmt.append("-o=-")
 
-        if remove_leading_slash:
-            extras.append("RemoveUseLeadingSlash")
-
-        if linebreak_after_namespace:
-            extras.append("PSR2LnAfterNamespace")
-
-        if wrong_constructor_name:
-            extras.append("WrongConstructorName")
-
-        if join_to_implode:
-            extras.append("JoinToImplode")
-
-        if strip_extra_comma_in_array:
-            extras.append("StripExtraCommaInArray")
-
-        if len(extras) > 0:
-            cmd_fmt.append("--passes="+','.join(extras))
-
-        preextras = []
-        if encapsulate_namespaces:
-            preextras.append("EncapsulateNamespaces")
-
-        if linebreak_between_methods:
-            preextras.append("SpaceBetweenMethods")
-
-        if remove_return_empty:
-            preextras.append("ReturnNull")
-
-        if add_missing_parentheses:
-            preextras.append("AddMissingParentheses")
-
-        if len(preextras) > 0:
-            cmd_fmt.append("--prepasses="+','.join(preextras))
-
-        cmd_fmt.append(uri)
-
-        uri_tmp = uri + "~"
+        if src is None:
+            cmd_fmt.append(uri)
+        else:
+            cmd_fmt.append("-")
 
         if debug:
             print("cmd_fmt: ", cmd_fmt)
 
-        if os.name == 'nt':
-            startupinfo = subprocess.STARTUPINFO()
-            startupinfo.dwFlags |= subprocess.STARTF_USESHOWWINDOW
-            p = subprocess.Popen(cmd_fmt, stdout=subprocess.PIPE, stderr=subprocess.PIPE, cwd=dirnm, shell=False, startupinfo=startupinfo)
+        if src is None:
+            if os.name == 'nt':
+                startupinfo = subprocess.STARTUPINFO()
+                startupinfo.dwFlags |= subprocess.STARTF_USESHOWWINDOW
+                p = subprocess.Popen(cmd_fmt, stdout=subprocess.PIPE, stderr=subprocess.PIPE, cwd=dirnm, shell=False, startupinfo=startupinfo)
+            else:
+                p = subprocess.Popen(cmd_fmt, stdout=subprocess.PIPE, stderr=subprocess.PIPE, cwd=dirnm, shell=False)
         else:
-            p = subprocess.Popen(cmd_fmt, stdout=subprocess.PIPE, stderr=subprocess.PIPE, cwd=dirnm, shell=False)
+            if os.name == 'nt':
+                startupinfo = subprocess.STARTUPINFO()
+                startupinfo.dwFlags |= subprocess.STARTF_USESHOWWINDOW
+                p = subprocess.Popen(cmd_fmt, stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=False, startupinfo=startupinfo)
+            else:
+                p = subprocess.Popen(cmd_fmt, stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=False)
+
+        if src is not None:
+            p.stdin.write(src.encode('utf-8'))
+
         res, err = p.communicate()
+
         if debug:
+            print("p:\n", p.returncode)
             print("err:\n", err.decode('utf-8'))
-        sublime.set_timeout(revert_active_window, 50)
-        time.sleep(1)
-        sublime.active_window().active_view().run_command("phpfmt_vet")
+
+        if p.returncode != 0:
+            return ''
+
+        if sgter is not None:
+            sublime.set_timeout(revert_active_window, 50)
+
+        return res.decode('utf-8')
     else:
         sublime.status_message("phpfmt: format failed - syntax errors found")
         if debug:
@@ -235,29 +272,35 @@ def dogeneratephpdoc(eself, eview):
     self = eself
     view = eview
     s = sublime.load_settings('phpfmt.sublime-settings')
+
+    additional_extensions = s.get("additional_extensions", [])
+    autoimport = s.get("autoimport", True)
     debug = s.get("debug", False)
-    psr = s.get("psr1_and_2", False)
+    enable_auto_align = s.get("enable_auto_align", False)
+    ignore_list = s.get("ignore_list", "")
+    indent_with_space = s.get("indent_with_space", False)
     psr1 = s.get("psr1", False)
     psr1_naming = s.get("psr1_naming", psr1)
     psr2 = s.get("psr2", False)
-    indent_with_space = s.get("indent_with_space", False)
-    enable_auto_align = s.get("enable_auto_align", False)
+    smart_linebreak_after_curly = s.get("smart_linebreak_after_curly", True)
     visibility_order = s.get("visibility_order", False)
-    autoimport = s.get("autoimport", True)
-    short_array = s.get("short_array", False)
-    merge_else_if = s.get("merge_else_if", False)
+    yoda = s.get("yoda", False)
+
+    passes = s.get("passes", [])
+
     php_bin = s.get("php_bin", "php")
     formatter_path = os.path.join(dirname(realpath(sublime.packages_path())), "Packages", "phpfmt", "fmt.phar")
+    php55compat = s.get("php55compat", False)
+    if php55compat is True:
+        formatter_path = os.path.join(dirname(realpath(sublime.packages_path())), "Packages", "phpfmt", "fmt.8.9.0.phar")
+
     config_file = os.path.join(dirname(realpath(sublime.packages_path())), "Packages", "phpfmt", "php.tools.ini")
-    laravel_style = s.get("laravel_style", False)
-    cakephp_style = s.get("cakephp_style", False)
-    strip_extra_comma_in_array = s.get("strip_extra_comma_in_array", False)
 
     uri = view.file_name()
     dirnm, sfn = os.path.split(uri)
     ext = os.path.splitext(uri)[1][1:]
 
-    if "php" != ext:
+    if "php" != ext and not ext in additional_extensions:
         print("phpfmt: not a PHP file")
         sublime.status_message("phpfmt: not a PHP file")
         return False
@@ -294,11 +337,6 @@ def dogeneratephpdoc(eself, eview):
         cmd_fmt.append(formatter_path)
         cmd_fmt.append("--config="+config_file)
 
-        if psr:
-            psr1 = True
-            psr1_naming = True
-            psr2 = True
-
         if psr1:
             cmd_fmt.append("--psr1")
 
@@ -319,26 +357,9 @@ def dogeneratephpdoc(eself, eview):
         if visibility_order:
             cmd_fmt.append("--visibility_order")
 
-        if laravel_style:
-            cmd_fmt.append("--laravel")
-
-        if cakephp_style:
-            cmd_fmt.append("--cakephp")
-
-        extras = []
-        if short_array:
-            extras.append("ShortArray")
-
-        if merge_else_if:
-            extras.append("MergeElseIf")
-
-        if strip_extra_comma_in_array:
-            extras.append("StripExtraCommaInArray")
-
-        if len(extras) > 0:
-            cmd_fmt.append("--passes="+','.join(extras))
-
-        cmd_fmt.append("--prepasses=GeneratePHPDoc")
+        passes.append("GeneratePHPDoc")
+        if len(passes) > 0:
+            cmd_fmt.append("--passes="+','.join(passes))
 
         cmd_fmt.append(uri)
 
@@ -363,29 +384,35 @@ def doreordermethod(eself, eview):
     self = eself
     view = eview
     s = sublime.load_settings('phpfmt.sublime-settings')
+
+    additional_extensions = s.get("additional_extensions", [])
+    autoimport = s.get("autoimport", True)
     debug = s.get("debug", False)
-    psr = s.get("psr1_and_2", False)
+    enable_auto_align = s.get("enable_auto_align", False)
+    ignore_list = s.get("ignore_list", "")
+    indent_with_space = s.get("indent_with_space", False)
     psr1 = s.get("psr1", False)
     psr1_naming = s.get("psr1_naming", psr1)
     psr2 = s.get("psr2", False)
-    indent_with_space = s.get("indent_with_space", False)
-    enable_auto_align = s.get("enable_auto_align", False)
+    smart_linebreak_after_curly = s.get("smart_linebreak_after_curly", True)
     visibility_order = s.get("visibility_order", False)
-    autoimport = s.get("autoimport", True)
-    short_array = s.get("short_array", False)
-    merge_else_if = s.get("merge_else_if", False)
+    yoda = s.get("yoda", False)
+
+    passes = s.get("passes", [])
+
     php_bin = s.get("php_bin", "php")
     formatter_path = os.path.join(dirname(realpath(sublime.packages_path())), "Packages", "phpfmt", "fmt.phar")
+    php55compat = s.get("php55compat", False)
+    if php55compat is True:
+        formatter_path = os.path.join(dirname(realpath(sublime.packages_path())), "Packages", "phpfmt", "fmt.8.9.0.phar")
+
     config_file = os.path.join(dirname(realpath(sublime.packages_path())), "Packages", "phpfmt", "php.tools.ini")
-    laravel_style = s.get("laravel_style", False)
-    cakephp_style = s.get("cakephp_style", False)
-    strip_extra_comma_in_array = s.get("strip_extra_comma_in_array", False)
 
     uri = view.file_name()
     dirnm, sfn = os.path.split(uri)
     ext = os.path.splitext(uri)[1][1:]
 
-    if "php" != ext:
+    if "php" != ext and not ext in additional_extensions:
         print("phpfmt: not a PHP file")
         sublime.status_message("phpfmt: not a PHP file")
         return False
@@ -422,11 +449,6 @@ def doreordermethod(eself, eview):
         cmd_fmt.append(formatter_path)
         cmd_fmt.append("--config="+config_file)
 
-        if psr:
-            psr1 = True
-            psr1_naming = True
-            psr2 = True
-
         if psr1:
             cmd_fmt.append("--psr1")
 
@@ -447,24 +469,9 @@ def doreordermethod(eself, eview):
         if visibility_order:
             cmd_fmt.append("--visibility_order")
 
-        if laravel_style:
-            cmd_fmt.append("--laravel")
-
-        if cakephp_style:
-            cmd_fmt.append("--cakephp")
-
-        extras = ['OrderMethod']
-        if short_array:
-            extras.append("ShortArray")
-
-        if merge_else_if:
-            extras.append("MergeElseIf")
-
-        if strip_extra_comma_in_array:
-            extras.append("StripExtraCommaInArray")
-
-        if len(extras) > 0:
-            cmd_fmt.append("--passes="+','.join(extras))
+        passes.append("OrganizeClass")
+        if len(passes) > 0:
+            cmd_fmt.append("--passes="+','.join(passes))
 
         cmd_fmt.append(uri)
 
@@ -491,7 +498,6 @@ def dorefactor(eself, eview, refactor_from = None, refactor_to = None):
     view = eview
     s = sublime.load_settings('phpfmt.sublime-settings')
     debug = s.get("debug", False)
-    psr = s.get("psr1_and_2", False)
     psr1 = s.get("psr1", False)
     psr1_naming = s.get("psr1_naming", psr1)
     psr2 = s.get("psr2", False)
@@ -503,12 +509,13 @@ def dorefactor(eself, eview, refactor_from = None, refactor_to = None):
     merge_else_if = s.get("merge_else_if", False)
     php_bin = s.get("php_bin", "php")
     refactor_path = os.path.join(dirname(realpath(sublime.packages_path())), "Packages", "phpfmt", "refactor.php")
+    additional_extensions = s.get("additional_extensions", [])
 
     uri = view.file_name()
     dirnm, sfn = os.path.split(uri)
     ext = os.path.splitext(uri)[1][1:]
 
-    if "php" != ext:
+    if "php" != ext and not ext in additional_extensions:
         print("phpfmt: not a PHP file")
         sublime.status_message("phpfmt: not a PHP file")
         return False
@@ -566,6 +573,60 @@ def dorefactor(eself, eview, refactor_from = None, refactor_to = None):
     else:
         print("lint error: ", lint_out)
 
+def debugEnvironment(php_bin, formatter_path):
+    ret = ""
+    cmd_ver = [php_bin,"-v"];
+    if os.name == 'nt':
+        startupinfo = subprocess.STARTUPINFO()
+        startupinfo.dwFlags |= subprocess.STARTF_USESHOWWINDOW
+        p = subprocess.Popen(cmd_ver, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=False, startupinfo=startupinfo)
+    else:
+        p = subprocess.Popen(cmd_ver, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=False)
+    res, err = p.communicate()
+    ret += ("phpfmt (php version):\n"+res.decode('utf-8'))
+    if err.decode('utf-8'):
+        ret += ("phpfmt (php version) err:\n"+err.decode('utf-8'))
+    ret += "\n"
+
+    cmd_ver = [php_bin,"-m"];
+    if os.name == 'nt':
+        startupinfo = subprocess.STARTUPINFO()
+        startupinfo.dwFlags |= subprocess.STARTF_USESHOWWINDOW
+        p = subprocess.Popen(cmd_ver, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=False, startupinfo=startupinfo)
+    else:
+        p = subprocess.Popen(cmd_ver, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=False)
+    res, err = p.communicate()
+    if res.decode('utf-8').find("tokenizer") != -1:
+        ret += ("phpfmt (php tokenizer) found\n")
+    else:
+        ret += ("phpfmt (php tokenizer):\n"+res.decode('utf-8'))
+        if err.decode('utf-8'):
+            ret += ("phpfmt (php tokenizer) err:\n"+err.decode('utf-8'))
+    ret += "\n"
+
+    cmd_ver = [php_bin,formatter_path,"--version"];
+    if os.name == 'nt':
+        startupinfo = subprocess.STARTUPINFO()
+        startupinfo.dwFlags |= subprocess.STARTF_USESHOWWINDOW
+        p = subprocess.Popen(cmd_ver, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=False, startupinfo=startupinfo)
+    else:
+        p = subprocess.Popen(cmd_ver, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=False)
+    res, err = p.communicate()
+    ret += ("phpfmt (fmt.phar version):\n"+res.decode('utf-8'))
+    if err.decode('utf-8'):
+        ret += ("phpfmt (fmt.phar version) err:\n"+err.decode('utf-8'))
+    ret += "\n"
+
+    s = sublime.load_settings('phpfmt.sublime-settings')
+    php55compat = s.get("php55compat", False)
+    ret += "PHP 5.5 compatibility mode: "
+    if php55compat:
+        ret += "True\n"
+    else:
+        ret += "False\n"
+    ret += "\n"
+
+    return ret
 
 def revert_active_window():
     sublime.active_window().active_view().run_command("revert")
@@ -598,18 +659,12 @@ def hidePanel(name, eself, eedit):
         eself.view.window().run_command("hide_panel", {"panel": "output."+name})
 
 class phpfmt(sublime_plugin.EventListener):
-    def on_post_save(self, view):
+    def on_pre_save(self, view):
         s = sublime.load_settings('phpfmt.sublime-settings')
         format_on_save = s.get("format_on_save", True)
 
-        if format_on_save and int(sublime.version()) < 3000:
-            self.on_post_save_async(view)
-
-    def on_post_save_async(self, view):
-        s = sublime.load_settings('phpfmt.sublime-settings')
-        format_on_save = s.get("format_on_save", True)
         if format_on_save:
-            dofmt(self, view)
+            view.run_command('php_fmt')
 
 class AnalyseThisCommand(sublime_plugin.TextCommand):
     def run(self, edit):
@@ -664,7 +719,10 @@ class CalltipCommand(sublime_plugin.TextCommand):
         dirnm, sfn = os.path.split(uri)
         ext = os.path.splitext(uri)[1][1:]
 
-        if "php" != ext:
+        s = sublime.load_settings('phpfmt.sublime-settings')
+
+        additional_extensions = s.get("additional_extensions", [])
+        if "php" != ext and not ext in additional_extensions:
             return False
 
         if not lookForOracleFile(self.view):
@@ -676,7 +734,6 @@ class CalltipCommand(sublime_plugin.TextCommand):
 
         lastCalltip = lookTerm
 
-        s = sublime.load_settings('phpfmt.sublime-settings')
         php_bin = s.get("php_bin", "php")
         oraclePath = os.path.join(dirname(realpath(sublime.packages_path())), "Packages", "phpfmt", "oracle.php")
 
@@ -710,46 +767,145 @@ class CalltipCommand(sublime_plugin.TextCommand):
 
         self.view.set_status("phpfmt", output)
 
+class DebugEnvCommand(sublime_plugin.TextCommand):
+    def run(self, edit):
+        s = sublime.load_settings('phpfmt.sublime-settings')
+        php55compat = s.get("php55compat", False)
+
+        php_bin = s.get("php_bin", "php")
+        formatter_path = os.path.join(dirname(realpath(sublime.packages_path())), "Packages", "phpfmt", "fmt.phar")
+        if php55compat is True:
+            formatter_path = os.path.join(dirname(realpath(sublime.packages_path())), "Packages", "phpfmt", "fmt.8.9.0.phar")
+
+        s = debugEnvironment(php_bin, formatter_path)
+        sublime.message_dialog(s)
 
 class FmtNowCommand(sublime_plugin.TextCommand):
     def run(self, edit):
-        s = sublime.load_settings('phpfmt.sublime-settings')
-        save_before_format_now = s.get('save_before_format_now', False)
-        if save_before_format_now:
-            sublime.active_window().active_view().run_command("save")
+        vsize = self.view.size()
+        src = self.view.substr(sublime.Region(0, vsize))
+        if not src.strip():
+            return
 
-        dofmt(self, self.view)
+        src = dofmt(self, self.view, None, src, True)
+        if src is False or src == "":
+            return False
+
+        _, err = merge(self.view, vsize, src, edit)
+        print(err)
+
+class TogglePassMenuCommand(sublime_plugin.TextCommand):
+    def run(self, edit):
+        s = sublime.load_settings('phpfmt.sublime-settings')
+        php_bin = s.get("php_bin", "php")
+        formatter_path = os.path.join(dirname(realpath(sublime.packages_path())), "Packages", "phpfmt", "fmt.phar")
+        php55compat = s.get("php55compat", False)
+        if php55compat is True:
+            formatter_path = os.path.join(dirname(realpath(sublime.packages_path())), "Packages", "phpfmt", "fmt.8.9.0.phar")
+
+        cmd_passes = [php_bin,formatter_path,'--list-simple'];
+        print(cmd_passes)
+
+        if os.name == 'nt':
+            startupinfo = subprocess.STARTUPINFO()
+            startupinfo.dwFlags |= subprocess.STARTF_USESHOWWINDOW
+            p = subprocess.Popen(cmd_passes, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=False, startupinfo=startupinfo)
+        else:
+            p = subprocess.Popen(cmd_passes, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=False)
+
+        out, err = p.communicate()
+
+        descriptions = out.decode("utf-8").strip().split(os.linesep)
+
+        def on_done(i):
+            if i >= 0 :
+                s = sublime.load_settings('phpfmt.sublime-settings')
+                passes = s.get('passes', [])
+                chosenPass = descriptions[i].split(' ')
+                option = chosenPass[0]
+
+                passDesc = option
+
+                if option in passes:
+                    passes.remove(option)
+                    msg = "phpfmt: "+passDesc+" disabled"
+                    print(msg)
+                    sublime.status_message(msg)
+                else:
+                    passes.append(option)
+                    msg = "phpfmt: "+passDesc+" enabled"
+                    print(msg)
+                    sublime.status_message(msg)
+
+                s.set('passes', passes)
+                sublime.save_settings('phpfmt.sublime-settings')
+
+        self.view.window().show_quick_panel(descriptions, on_done, sublime.MONOSPACE_FONT)
+
+class ToggleExcludeMenuCommand(sublime_plugin.TextCommand):
+    def run(self, edit):
+        s = sublime.load_settings('phpfmt.sublime-settings')
+        php_bin = s.get("php_bin", "php")
+        formatter_path = os.path.join(dirname(realpath(sublime.packages_path())), "Packages", "phpfmt", "fmt.phar")
+        php55compat = s.get("php55compat", False)
+        if php55compat is True:
+            formatter_path = os.path.join(dirname(realpath(sublime.packages_path())), "Packages", "phpfmt", "fmt.8.9.0.phar")
+
+        cmd_passes = [php_bin,formatter_path,'--list-simple'];
+        print(cmd_passes)
+
+        if os.name == 'nt':
+            startupinfo = subprocess.STARTUPINFO()
+            startupinfo.dwFlags |= subprocess.STARTF_USESHOWWINDOW
+            p = subprocess.Popen(cmd_passes, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=False, startupinfo=startupinfo)
+        else:
+            p = subprocess.Popen(cmd_passes, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=False)
+
+        out, err = p.communicate()
+
+        descriptions = out.decode("utf-8").strip().split(os.linesep)
+
+        def on_done(i):
+            if i >= 0 :
+                s = sublime.load_settings('phpfmt.sublime-settings')
+                excludes = s.get('excludes', [])
+                chosenPass = descriptions[i].split(' ')
+                option = chosenPass[0]
+
+                passDesc = option
+
+                if option in excludes:
+                    excludes.remove(option)
+                    msg = "phpfmt: "+passDesc+" disabled"
+                    print(msg)
+                    sublime.status_message(msg)
+                else:
+                    excludes.append(option)
+                    msg = "phpfmt: "+passDesc+" enabled"
+                    print(msg)
+                    sublime.status_message(msg)
+
+                s.set('excludes', excludes)
+                sublime.save_settings('phpfmt.sublime-settings')
+
+        self.view.window().show_quick_panel(descriptions, on_done, sublime.MONOSPACE_FONT)
 
 class ToggleCommand(sublime_plugin.TextCommand):
     def run(self, edit, option):
         s = sublime.load_settings('phpfmt.sublime-settings')
         options = {
-            "add_missing_parentheses":"add missing parentheses",
             "autocomplete":"autocomplete",
             "autoimport":"dependency autoimport",
-            "autopreincrement":"automatic preincrement",
-            "cakephp_style":"CakePHP style",
             "enable_auto_align":"auto align",
-            "encapsulate_namespaces":"automatic namespace encapsulation",
             "format_on_save":"format on save",
-            "indent_with_space":"indent with space",
-            "join_to_implode":"replace join() to implode()",
-            "laravel_style":"Laravel style",
-            "linebreak_after_namespace":"automatic linebreak after namespace",
-            "linebreak_between_methods":"automatic linebreak between methods",
-            "merge_else_if":"merge else if into elseif",
+            "php55compat":"PHP 5.5 compatibility mode",
             "psr1":"PSR1",
             "psr1_naming":"PSR1 Class and Method Naming",
             "psr2":"PSR2",
-            "remove_leading_slash":"remove_leading_slash",
-            "remove_return_empty":"remove empty returns",
-            "save_before_format_now":"save before 'format now'",
-            "short_array":"short array",
+            "readini":"look for .php.tools.ini",
             "smart_linebreak_after_curly":"smart linebreak after curly",
-            "strip_extra_comma_in_array":"strip extra comma in array",
-            "vet":"vet",
+            "skip_if_ini_missing":"skip if ini file is missing",
             "visibility_order":"visibility order",
-            "wrong_constructor_name":"update old style constructor",
             "yoda":"yoda mode",
         }
         s = sublime.load_settings('phpfmt.sublime-settings')
@@ -782,7 +938,10 @@ class RefactorCommand(sublime_plugin.TextCommand):
         dirnm, sfn = os.path.split(uri)
         ext = os.path.splitext(uri)[1][1:]
 
-        if "php" != ext:
+        s = sublime.load_settings('phpfmt.sublime-settings')
+        additional_extensions = s.get("additional_extensions", [])
+
+        if "php" != ext and not ext in additional_extensions:
             print("phpfmt: not a PHP file")
             sublime.status_message("phpfmt: not a PHP file")
             return False
@@ -813,52 +972,6 @@ class SgterCamelCommand(sublime_plugin.TextCommand):
 class SgterGoCommand(sublime_plugin.TextCommand):
     def run(self, edit):
         dofmt(self, self.view, 'golang')
-
-class PhpfmtVetCommand(sublime_plugin.TextCommand):
-    def run(self, edit):
-        s = sublime.load_settings('phpfmt.sublime-settings')
-        run_vet = s.get('vet', False)
-        if not run_vet:
-            return False
-
-        view = self.view
-
-        uri = view.file_name()
-        dirNm, sfn = os.path.split(uri)
-        ext = os.path.splitext(uri)[1][1:]
-        if "php" != ext:
-            print("phpfmt (vet): not a PHP file")
-            return False
-
-
-        php_bin = s.get("php_bin", "php")
-        vetPath = os.path.join(dirname(realpath(sublime.packages_path())), "Packages", "phpfmt", "vet.php")
-        cmdVet = [php_bin]
-        cmdVet.append(vetPath)
-        cmdVet.append(view.file_name())
-        if os.name == 'nt':
-            startupinfo = subprocess.STARTUPINFO()
-            startupinfo.dwFlags |= subprocess.STARTF_USESHOWWINDOW
-            p = subprocess.Popen(cmdVet, stdout=subprocess.PIPE, stderr=subprocess.PIPE, cwd=dirNm, shell=False, startupinfo=startupinfo)
-        else:
-            p = subprocess.Popen(cmdVet, stdout=subprocess.PIPE, stderr=subprocess.PIPE, cwd=dirNm, shell=False)
-        res, err = p.communicate()
-        print("phpfmt (vet): "+res.decode('utf-8'))
-        print("phpfmt (vet) err: "+err.decode('utf-8'))
-        if len(res.decode('utf-8')) > 0:
-            outputToPanel("phpfmtvet", self, edit, res.decode('utf-8'));
-            # errors = res.decode('utf-8').split('\n')
-            # x = csv.reader(errors)
-            # regions = []
-            # for row in x:
-            #     line = self.view.full_line(self.view.text_point(row[1],0))
-            #     regions.append(line)
-            # view.erase_regions("vet")
-            # view.add_regions("vet", [line], "comment", "dot")
-            # print(view.get_regions("vet"))
-            # print("draw line")
-        else:
-            hidePanel("phpfmtvet", self, edit)
 
 class BuildOracleCommand(sublime_plugin.TextCommand):
     def run(self, edit):
@@ -924,7 +1037,26 @@ class BuildOracleCommand(sublime_plugin.TextCommand):
             else:
                 sublime.set_timeout(buildDB, 50)
 
+class IndentWithSpacesCommand(sublime_plugin.TextCommand):
+    def run(self, edit):
+        def setIndentWithSpace(text):
+            s = sublime.load_settings('phpfmt.sublime-settings')
+            v = text.strip()
+            if not v:
+                v = False
+            else:
+                v = int(v)
+            s.set("indent_with_space", v)
+            sublime.save_settings('phpfmt.sublime-settings')
+            sublime.status_message("phpfmt (indentation): done")
+            sublime.active_window().active_view().run_command("fmt_now")
 
+        s = sublime.load_settings('phpfmt.sublime-settings')
+        spaces = s.get("indent_with_space", 4)
+        if not spaces:
+            spaces = ""
+        spaces = str(spaces)
+        self.view.window().show_input_panel('how many spaces? (leave it empty to return to tabs)', spaces, setIndentWithSpace, None, None)
 
 class PHPFmtComplete(sublime_plugin.EventListener):
     def on_query_completions(self, view, prefix, locations):
@@ -1018,6 +1150,44 @@ class PHPFmtComplete(sublime_plugin.EventListener):
 
         return comps
 
+s = sublime.load_settings('phpfmt.sublime-settings')
+version = s.get('version', 1)
+s.set('version', version)
+sublime.save_settings('phpfmt.sublime-settings')
+
+if version == 2:
+    # Convert to version 3
+    print("Convert to version 3")
+    s.set('version', 3)
+    sublime.save_settings('phpfmt.sublime-settings')
+
+if version == 3:
+    # Convert to version 3
+    print("Convert to version 4")
+    s.set('version', 4)
+    passes = s.get('passes', [])
+    passes.append("ReindentSwitchBlocks")
+    s.set('passes', passes)
+    sublime.save_settings('phpfmt.sublime-settings')
+
+
+# def selfupdate():
+#     s = sublime.load_settings('phpfmt.sublime-settings')
+#     php_bin = s.get("php_bin", "php")
+#     formatter_path = os.path.join(dirname(realpath(sublime.packages_path())), "Packages", "phpfmt", "fmt.phar")
+
+#     print("Selfupdate")
+#     cmd_update = [php_bin, formatter_path, '--selfupdate']
+#     if os.name == 'nt':
+#         startupinfo = subprocess.STARTUPINFO()
+#         startupinfo.dwFlags |= subprocess.STARTF_USESHOWWINDOW
+#         p = subprocess.Popen(cmd_update, shell=False, startupinfo=startupinfo)
+#     else:
+#         p = subprocess.Popen(cmd_update, shell=False)
+
+# sublime.set_timeout(selfupdate, 3000)
+
+
 def _ct_poller():
     s = sublime.load_settings('phpfmt.sublime-settings')
     if s.get("calltip", False):
@@ -1029,3 +1199,76 @@ def _ct_poller():
         sublime.set_timeout(_ct_poller, 5000)
 
 _ct_poller()
+
+
+class PhpFmtCommand(sublime_plugin.TextCommand):
+    def run(self, edit):
+        vsize = self.view.size()
+        src = self.view.substr(sublime.Region(0, vsize))
+        if not src.strip():
+            return
+
+        src = dofmt(self, self.view, None, src)
+        if src is False or src == "":
+            return False
+
+        _, err = merge(self.view, vsize, src, edit)
+        print(err)
+
+class MergeException(Exception):
+    pass
+
+def _merge(view, size, text, edit):
+    def ss(start, end):
+        return view.substr(sublime.Region(start, end))
+    dmp = diff_match_patch()
+    diffs = dmp.diff_main(ss(0, size), text, False)
+    dmp.diff_cleanupEfficiency(diffs)
+    i = 0
+    dirty = False
+    for d in diffs:
+        k, s = d
+        l = len(s)
+        if k == 0:
+            # match
+            l = len(s)
+            if ss(i, i+l) != s:
+                raise MergeException('mismatch', dirty)
+            i += l
+        else:
+            dirty = True
+            if k > 0:
+                # insert
+                view.insert(edit, i, s)
+                i += l
+            else:
+                # delete
+                if ss(i, i+l) != s:
+                    raise MergeException('mismatch', dirty)
+                view.erase(edit, sublime.Region(i, i+l))
+    return dirty
+
+def merge(view, size, text, edit):
+    vs = view.settings()
+    ttts = vs.get("translate_tabs_to_spaces")
+    vs.set("translate_tabs_to_spaces", False)
+    origin_src = view.substr(sublime.Region(0, view.size()))
+    if not origin_src.strip():
+        vs.set("translate_tabs_to_spaces", ttts)
+        return (False, '')
+
+    try:
+        dirty = False
+        err = ''
+        if size < 0:
+            size = view.size()
+        dirty = _merge(view, size, text, edit)
+    except MergeException as ex:
+        dirty = True
+        err = "Could not merge changes into the buffer, edit aborted: %s" % ex[0]
+        view.replace(edit, sublime.Region(0, view.size()), origin_src)
+    except Exception as ex:
+        err = "error: %s" % ex
+    finally:
+        vs.set("translate_tabs_to_spaces", ttts)
+        return (dirty, err)

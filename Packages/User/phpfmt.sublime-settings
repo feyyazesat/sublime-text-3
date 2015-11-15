@@ -2,7 +2,12 @@
 	"disable_auto_align": true,
 	"format_on_save": false,
 	"indent_with_space": true,
+	"passes":
+	[
+		"ReindentSwitchBlocks"
+	],
 	"php_bin": "/usr/bin/php",
 	"psr1": false,
-	"psr2": true
+	"psr2": true,
+	"version": 4
 }
